@@ -100,56 +100,11 @@ class SimpleLinearRegression:
         if X.shape[1] <= 0:
             raise ValueError("X must have at least one feature")
 
-    def params_optimization(self, X_train, y_train, X_test, y_test):
-        # Define the parameter grid
-        param_grid = {'learning_rate': [0.1, 0.01, 0.001],
-                      'n_estimators': [500, 1000],
-                      'max_depth': [4, 6, 8, 10],
-                      'subsample': [0.9, 0.5, 0.2, 0.1]
-                      }
-
-        # Fit the grid search and find best params
-        GBR = GradientBoostingRegressor()
-        cv = RepeatedKFold(n_splits=10, n_repeats=3, random_state=1)
-        grid_search = GridSearchCV(estimator=GBR, param_grid=param_grid, cv=cv,
-                                   verbose=1, n_jobs=-1, scoring='r2', return_train_score=True)
-        grid_search.fit(X_train, ravel(y_train))
-
-        print(f"The best estimator across ALL searched params: {grid_search.best_estimator_}")
-        print(f"Best parameters: {grid_search.best_params_}")
-
-        # Make predictions on the test set
-        y_pred = grid_search.predict(X_test)
-        print(f"Mean squared error: {mean_squared_error(y_test, y_pred)}")
-        print(f"R^2 score: {r2_score(y_test, y_pred)}")
-        return grid_search.best_params_
-
-    def save_diabetes_model(self, file_path):
-        with open(file_path, 'wb') as file:
-            pickle.dump(self, file)
-        print(f"Model saved to {file_path}")
-
-    def load_and_predict(self):
-        # loading the model
-        model1 = joblib.load('web/model/Diabetes.pkl')
-        # predicting
-        model1.predict(X_test)
-
 
 if __name__ == "__main__":
     model = SimpleLinearRegression()
     X_train, y_train, X_test, y_test = generate_data()
 
-    # model.params_optimization(X_train, y_train, X_test, y_test)
     model.fit(X_train, y_train)
     predicted = model.predict(X_test)
     evaluate(model, X_test, y_test, predicted)
-
-    # Save trained model to file
-    pickle.dump(model, open("web/model/Diabetes.pkl", "wb"))
-    # Load model
-    loaded_model = pickle.load(open("web/model/Diabetes.pkl", "rb"))
-    print('--------------------------------')
-    # Make prediction on unseen data
-    y = loaded_model.predict([[20]])
-    print(f'Y value is: {y}, when X is 20')
