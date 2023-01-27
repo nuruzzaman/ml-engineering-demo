@@ -27,7 +27,8 @@
         .bgChat  {
             background-image: url("resources/images/chat-bg.png");
             height: 100%;
-            background-repeat: no-repeat;
+            width: 100%;
+            background-repeat: repeat;
         }
     </style>
 </head>
@@ -36,7 +37,7 @@
 
 <!-- Navbar : Header -->
 <nav class="navbar navbar-expand nav-header">
-    <a class="navbar-brand mr-1" href="index.html">EGL - ML Challenges</a>
+    <a class="navbar-brand mr-1" href="#">EGL - ML Challenges</a>
     <div class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
         <ul class="navbar-nav ml-auto ml-md-0">
             <a class="nav-link" href="#">Predictive Modelling</a>
@@ -45,7 +46,7 @@
 </nav>
 
 <div class="bg">
-    <div class="col-md-4 col-md-offset-4">
+    <div class="col-md-5 col-md-offset-4">
         <br>
         <div class="card card-chatbot mx-auto">
             <div class="card-header text-center"><strong>Diabetes Predictive Model</strong></div>
@@ -57,7 +58,7 @@
                         <div class="answer_text">
                             <p>Hi, write payload of one record and it will return the prediction for that record. For example,
                                 <br> One prediction: 4
-                                <br> Multiple predictions: [4, 7, 19]
+                                <br> Multiple predictions seperated by comma: 4, 7, 19
                             </p>
                         </div>
                     </div>
@@ -67,7 +68,7 @@
                     <a class="d-block mt-3">Enter a record: </a>
                 </div>
                 <div class="right-inner-addon chat_box">
-                    <i class="fi-magnifying-glass"></i>
+                    <i class="fi-male-female"></i>
                     <input class="form-control" type="text" onKeyUp="key_up()"/>
                 </div>
 

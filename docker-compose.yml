@@ -7,11 +7,9 @@ services:
 
   ml-engineering:
     image: data2ml/ml-engineering:latest
-    container_name: ml-engineering
-    web:
-        build: .
-        command: python app/server.py
-        ports:
-          - "5000:5000"
-        volumes:
-          - .:/app
+    container_name: ml-engineering-demo
+    command: python app.py
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./app:/app
