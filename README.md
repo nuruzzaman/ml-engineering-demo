@@ -1,6 +1,8 @@
 ## ML Engineering Challenge
 
-[![Docker Image CI](https://github.com/nuruzzaman/ml-engineering-demo/actions/workflows/deploy-heroku.yml/badge.svg)](https://github.com/nuruzzaman/ml-engineering-demo/actions/workflows/deploy-heroku.yml)
+[![Docker](https://github.com/nuruzzaman/ml-engineering-demo/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/nuruzzaman/ml-engineering-demo/actions/workflows/docker-publish.yml)
+
+[![CodeQL](https://github.com/nuruzzaman/ml-engineering-demo/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/nuruzzaman/ml-engineering-demo/actions/workflows/github-code-scanning/codeql)
 
 
 #### Solution Includes 
