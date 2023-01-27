@@ -1,6 +1,6 @@
 ## ML Engineering Challenge
 
-[![Docker Image CI](https://github.com/nuruzzaman/ml-engineering/actions/workflows/docker-compose.yml/badge.svg)](https://github.com/nuruzzaman/ml-engineering/actions/workflows/docker-compose.yml)
+[![Docker Image CI](https://github.com/nuruzzaman/ml-engineering-demo/actions/workflows/deploy-heroku.yml/badge.svg)](https://github.com/nuruzzaman/ml-engineering-demo/actions/workflows/deploy-heroku.yml)
 
 
 #### Solution Includes 
