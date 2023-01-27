@@ -1,0 +1,17 @@
+# Author: Mohammad Nuruzzaman 
+# Date: 26th January 2023
+
+version: '3'
+ 
+services:
+
+  ml-engineering:
+    image: data2ml/ml-engineering:latest
+    container_name: ml-engineering
+    web:
+        build: .
+        command: python app/server.py
+        ports:
+          - "5000:5000"
+        volumes:
+          - .:/app
