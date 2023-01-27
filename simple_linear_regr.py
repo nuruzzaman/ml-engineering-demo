@@ -135,9 +135,9 @@ if __name__ == "__main__":
     evaluate(model, X_test, y_test, predicted)
 
     # Save trained model to file
-    pickle.dump(model, open("model/Diabetes.pkl", "wb"))
+    pickle.dump(model, open("Diabetes.pkl", "wb"))
     # Load model
-    loaded_model = pickle.load(open("model/Diabetes.pkl", "rb"))
+    loaded_model = pickle.load(open("Diabetes.pkl", "rb"))
 
     # Make prediction on unseen data
     X = np.array([[1], [2], [3]])

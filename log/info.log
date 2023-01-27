@@ -2328,3 +2328,205 @@
 2023-01-27 01:39:44,992 : INFO : 127.0.0.1 - - [27/Jan/2023 01:39:44] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
 2023-01-27 01:39:47,625 : INFO : 127.0.0.1 - - [27/Jan/2023 01:39:47] "[37mPOST /stream HTTP/1.1[0m" 200 -
 2023-01-27 01:39:52,855 : INFO : 127.0.0.1 - - [27/Jan/2023 01:39:52] "[37mPOST /batch HTTP/1.1[0m" 200 -
+2023-01-27 23:42:31,671 : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2023-01-27 23:42:31,672 : INFO : [33mPress CTRL+C to quit[0m
+2023-01-27 23:43:38,989 : INFO : 127.0.0.1 - - [27/Jan/2023 23:43:38] "GET / HTTP/1.1" 200 -
+2023-01-27 23:43:41,609 : INFO : 127.0.0.1 - - [27/Jan/2023 23:43:41] "POST /stream HTTP/1.1" 200 -
+2023-01-27 23:43:45,819 : INFO : 127.0.0.1 - - [27/Jan/2023 23:43:45] "POST /batch HTTP/1.1" 200 -
+2023-01-27 23:43:52,554 : INFO : 127.0.0.1 - - [27/Jan/2023 23:43:52] "[33mGET /index.html HTTP/1.1[0m" 404 -
+2023-01-27 23:44:24,944 : INFO : 127.0.0.1 - - [27/Jan/2023 23:44:24] "GET / HTTP/1.1" 200 -
+2023-01-27 23:44:26,336 : INFO : 127.0.0.1 - - [27/Jan/2023 23:44:26] "[33mGET /index.html HTTP/1.1[0m" 404 -
+2023-01-27 23:44:31,657 : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2023-01-27 23:44:31,657 : INFO : [33mPress CTRL+C to quit[0m
+2023-01-27 23:44:34,041 : INFO : 127.0.0.1 - - [27/Jan/2023 23:44:34] "[33mGET /index.html HTTP/1.1[0m" 404 -
+2023-01-27 23:44:37,045 : INFO : 127.0.0.1 - - [27/Jan/2023 23:44:37] "POST /stream HTTP/1.1" 200 -
+2023-01-27 23:44:38,802 : INFO : 127.0.0.1 - - [27/Jan/2023 23:44:38] "[33mGET /index.html HTTP/1.1[0m" 404 -
+2023-01-27 23:44:52,358 : INFO : 127.0.0.1 - - [27/Jan/2023 23:44:52] "GET / HTTP/1.1" 200 -
+2023-01-27 23:44:54,333 : INFO : 127.0.0.1 - - [27/Jan/2023 23:44:54] "GET / HTTP/1.1" 200 -
+2023-01-27 23:45:23,275 : INFO : 127.0.0.1 - - [27/Jan/2023 23:45:23] "GET / HTTP/1.1" 200 -
+2023-01-27 23:45:24,867 : INFO : 127.0.0.1 - - [27/Jan/2023 23:45:24] "GET / HTTP/1.1" 200 -
+2023-01-27 23:45:26,022 : INFO : 127.0.0.1 - - [27/Jan/2023 23:45:26] "POST /stream HTTP/1.1" 200 -
+2023-01-27 23:45:36,947 : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2023-01-27 23:45:36,947 : INFO : [33mPress CTRL+C to quit[0m
+2023-01-27 23:45:37,019 : INFO : 127.0.0.1 - - [27/Jan/2023 23:45:37] "GET / HTTP/1.1" 200 -
+2023-01-27 23:46:14,603 : INFO : 127.0.0.1 - - [27/Jan/2023 23:46:14] "GET / HTTP/1.1" 200 -
+2023-01-27 23:46:20,620 : INFO : 127.0.0.1 - - [27/Jan/2023 23:46:20] "GET / HTTP/1.1" 200 -
+2023-01-27 23:49:17,935 : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2023-01-27 23:49:17,935 : INFO : [33mPress CTRL+C to quit[0m
+2023-01-27 23:49:18,153 : INFO : 127.0.0.1 - - [27/Jan/2023 23:49:18] "GET / HTTP/1.1" 200 -
+2023-01-27 23:49:18,398 : INFO : 127.0.0.1 - - [27/Jan/2023 23:49:18] "[33mGET /vendor/bootstrap/css/bootstrap.css.map HTTP/1.1[0m" 404 -
+2023-01-27 23:49:25,762 : INFO : 127.0.0.1 - - [27/Jan/2023 23:49:25] "POST /stream HTTP/1.1" 200 -
+2023-01-27 23:52:44,602 : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2023-01-27 23:52:44,602 : INFO : [33mPress CTRL+C to quit[0m
+2023-01-27 23:52:46,212 : INFO : 127.0.0.1 - - [27/Jan/2023 23:52:46] "GET / HTTP/1.1" 200 -
+2023-01-27 23:52:46,484 : INFO : 127.0.0.1 - - [27/Jan/2023 23:52:46] "[33mGET /vendor/bootstrap/css/bootstrap.css.map HTTP/1.1[0m" 404 -
+2023-01-27 23:52:48,114 : INFO : 127.0.0.1 - - [27/Jan/2023 23:52:48] "GET / HTTP/1.1" 200 -
+2023-01-27 23:52:48,489 : INFO : 127.0.0.1 - - [27/Jan/2023 23:52:48] "[33mGET /vendor/bootstrap/css/bootstrap.css.map HTTP/1.1[0m" 404 -
+2023-01-27 23:52:50,894 : INFO : 127.0.0.1 - - [27/Jan/2023 23:52:50] "POST /stream HTTP/1.1" 200 -
+2023-01-27 23:54:22,141 : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2023-01-27 23:54:22,141 : INFO : [33mPress CTRL+C to quit[0m
+2023-01-27 23:54:22,861 : INFO : 127.0.0.1 - - [27/Jan/2023 23:54:22] "GET / HTTP/1.1" 200 -
+2023-01-27 23:54:23,119 : INFO : 127.0.0.1 - - [27/Jan/2023 23:54:23] "[33mGET /vendor/bootstrap/css/bootstrap.css.map HTTP/1.1[0m" 404 -
+2023-01-27 23:54:34,813 : INFO : 127.0.0.1 - - [27/Jan/2023 23:54:34] "GET / HTTP/1.1" 200 -
+2023-01-27 23:54:35,194 : INFO : 127.0.0.1 - - [27/Jan/2023 23:54:35] "[33mGET /vendor/bootstrap/css/bootstrap.css.map HTTP/1.1[0m" 404 -
+2023-01-27 23:54:41,322 : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2023-01-27 23:54:41,322 : INFO : [33mPress CTRL+C to quit[0m
+2023-01-27 23:54:41,790 : INFO : 127.0.0.1 - - [27/Jan/2023 23:54:41] "GET / HTTP/1.1" 200 -
+2023-01-27 23:54:42,051 : INFO : 127.0.0.1 - - [27/Jan/2023 23:54:42] "[33mGET /vendor/bootstrap/css/bootstrap.css.map HTTP/1.1[0m" 404 -
+2023-01-27 23:54:50,888 : INFO : 127.0.0.1 - - [27/Jan/2023 23:54:50] "POST /stream HTTP/1.1" 200 -
+2023-01-27 23:55:03,786 : ERROR : Exception on /stream [POST]
+Traceback (most recent call last):
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File ".\app.py", line 42, in stream
+    X = int(X_input)
+ValueError: invalid literal for int() with base 10: '12.2'
+2023-01-27 23:55:03,805 : INFO : 127.0.0.1 - - [27/Jan/2023 23:55:03] "[35m[1mPOST /stream HTTP/1.1[0m" 500 -
+2023-01-27 23:55:09,101 : INFO : 127.0.0.1 - - [27/Jan/2023 23:55:09] "POST /batch HTTP/1.1" 200 -
+2023-01-27 23:55:33,126 : INFO : 127.0.0.1 - - [27/Jan/2023 23:55:33] "GET / HTTP/1.1" 200 -
+2023-01-27 23:55:53,115 : ERROR : Exception on /stream [POST]
+Traceback (most recent call last):
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File ".\app.py", line 42, in stream
+    X = int(X_input)
+ValueError: invalid literal for int() with base 10: '12.3'
+2023-01-27 23:55:53,116 : INFO : 127.0.0.1 - - [27/Jan/2023 23:55:53] "[35m[1mPOST /stream HTTP/1.1[0m" 500 -
+2023-01-27 23:55:57,809 : INFO : 127.0.0.1 - - [27/Jan/2023 23:55:57] "[33mGET /vendor/bootstrap/css/bootstrap.css.map HTTP/1.1[0m" 404 -
+2023-01-27 23:57:04,888 : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2023-01-27 23:57:04,889 : INFO : [33mPress CTRL+C to quit[0m
+2023-01-27 23:57:07,805 : INFO : 127.0.0.1 - - [27/Jan/2023 23:57:07] "GET / HTTP/1.1" 200 -
+2023-01-27 23:57:10,613 : ERROR : Exception on /stream [POST]
+Traceback (most recent call last):
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File ".\app.py", line 43, in stream
+    X = int(X_input)
+ValueError: invalid literal for int() with base 10: '12.4'
+2023-01-27 23:57:10,614 : INFO : 127.0.0.1 - - [27/Jan/2023 23:57:10] "[35m[1mPOST /stream HTTP/1.1[0m" 500 -
+2023-01-27 23:57:30,950 : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2023-01-27 23:57:30,950 : INFO : [33mPress CTRL+C to quit[0m
+2023-01-27 23:57:34,815 : INFO : 127.0.0.1 - - [27/Jan/2023 23:57:34] "GET / HTTP/1.1" 200 -
+2023-01-27 23:57:37,218 : ERROR : Exception on /stream [POST]
+Traceback (most recent call last):
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File ".\app.py", line 42, in stream
+    X = int(X_input)
+ValueError: invalid literal for int() with base 10: '12.7'
+2023-01-27 23:57:37,221 : INFO : 127.0.0.1 - - [27/Jan/2023 23:57:37] "[35m[1mPOST /stream HTTP/1.1[0m" 500 -
+2023-01-28 00:00:32,514 : ERROR : Exception on /stream [POST]
+Traceback (most recent call last):
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File ".\app.py", line 42, in stream
+    X = int(X_input)
+ValueError: invalid literal for int() with base 10: '128.8'
+2023-01-28 00:00:32,517 : INFO : 127.0.0.1 - - [28/Jan/2023 00:00:32] "[35m[1mPOST /stream HTTP/1.1[0m" 500 -
+2023-01-28 00:07:57,850 : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2023-01-28 00:07:57,850 : INFO : [33mPress CTRL+C to quit[0m
+2023-01-28 00:08:00,736 : INFO : 127.0.0.1 - - [28/Jan/2023 00:08:00] "GET / HTTP/1.1" 200 -
+2023-01-28 00:08:03,141 : ERROR : Exception on /stream [POST]
+Traceback (most recent call last):
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File ".\app.py", line 42, in stream
+    X = int(X_input, 2)
+ValueError: invalid literal for int() with base 2: '12.4'
+2023-01-28 00:08:03,143 : INFO : 127.0.0.1 - - [28/Jan/2023 00:08:03] "[35m[1mPOST /stream HTTP/1.1[0m" 500 -
+2023-01-28 00:08:10,455 : ERROR : Exception on /stream [POST]
+Traceback (most recent call last):
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File ".\app.py", line 42, in stream
+    X = int(X_input, 2)
+ValueError: invalid literal for int() with base 2: '12'
+2023-01-28 00:08:10,456 : INFO : 127.0.0.1 - - [28/Jan/2023 00:08:10] "[35m[1mPOST /stream HTTP/1.1[0m" 500 -
+2023-01-28 00:09:08,661 : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2023-01-28 00:09:08,661 : INFO : [33mPress CTRL+C to quit[0m
+2023-01-28 00:09:12,549 : INFO : 127.0.0.1 - - [28/Jan/2023 00:09:12] "GET / HTTP/1.1" 200 -
+2023-01-28 00:09:14,103 : INFO : 127.0.0.1 - - [28/Jan/2023 00:09:14] "POST /stream HTTP/1.1" 200 -
+2023-01-28 00:09:16,583 : ERROR : Exception on /stream [POST]
+Traceback (most recent call last):
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File ".\app.py", line 42, in stream
+    X = int(X_input, 10)
+ValueError: invalid literal for int() with base 10: '12.2'
+2023-01-28 00:09:16,585 : INFO : 127.0.0.1 - - [28/Jan/2023 00:09:16] "[35m[1mPOST /stream HTTP/1.1[0m" 500 -
+2023-01-28 00:09:27,171 : INFO : 127.0.0.1 - - [28/Jan/2023 00:09:27] "POST /stream HTTP/1.1" 200 -
+2023-01-28 00:09:30,555 : INFO : 127.0.0.1 - - [28/Jan/2023 00:09:30] "POST /batch HTTP/1.1" 200 -
+2023-01-28 00:09:33,462 : ERROR : Exception on /stream [POST]
+Traceback (most recent call last):
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File ".\app.py", line 42, in stream
+    X = int(X_input, 10)
+ValueError: invalid literal for int() with base 10: '12.1'
+2023-01-28 00:09:33,464 : INFO : 127.0.0.1 - - [28/Jan/2023 00:09:33] "[35m[1mPOST /stream HTTP/1.1[0m" 500 -
+2023-01-28 00:09:38,917 : INFO : 127.0.0.1 - - [28/Jan/2023 00:09:38] "GET / HTTP/1.1" 200 -
