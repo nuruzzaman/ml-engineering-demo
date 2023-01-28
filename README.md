@@ -19,7 +19,7 @@ The challenge is designed to test a large variety of skills that a machine learn
 (4) Provide a solution document and hight-level architecture-diagram. 
 
  
-#### Solution Overview 
+### Solution Overview 
 
 The solution works end-to-end from loading diabetes dataset, train the model, predict, save the model, reload it for inference from web browser, build docker image, deploy it on Heroku through CI/CD pipeline. The test solution can be accessible at https://ml-engineering-demo.herokuapp.com/ 
 
@@ -72,19 +72,18 @@ You also can use `docker-compose` for building and running the container, which 
 docker-compose up -d 
 ```
 
-
-#### CI/CD pipeline to deploy into Heroku (Prod environment)
+### CI/CD pipeline to deploy into Heroku (Prod environment)
 I created a workflow in github. when you commit your code it will be automatically tested the code, build and deploy in production environment. The test solution can be accessible at https://ml-engineering-demo.herokuapp.com/ 
 
 There is another automated pipeline for DockerHub as well. You can find docker image at: https://hub.docker.com/r/data2ml/ml-engineering
 
 
-#### High-level architecture diagram of the implementation
+### High-level architecture diagram of the implementation
 ![architecture-diagram.png](architecture-diagram.png) 
    
-##Key points to remember
+## Key points to remember
 
-#### What components an enterprise machine learning system would have? 
+### What components an enterprise machine learning system would have? 
 An enterprise ML system could have several components, including:
 - Data storage and management: for storing and managing large amounts of data, which is used for training, validating, and deploying ML models. This may include data lakes, data warehouses, or other big data storage and management systems.
 - Data pre-processing and cleaning pipeline: for preparing and cleaning the data before it is used for training ML models. This includes tasks such as data imputation, data normalization, and data transformation.
@@ -96,7 +95,7 @@ An enterprise ML system could have several components, including:
 - Workflow management: for managing and automating the various stages of the ML pipeline, such as data preparation, model training, model deployment, and monitoring. This may include using workflow management systems, such as Airflow, Prefect, etc.
 
 
-#### what other features an enterprise machine learning system would have? 
+### what other features an enterprise machine learning system would have? 
 An enterprise machine learning (ML) system would have several features, such as:
 - Scalability: able to handle large amounts of data and support the training and deployment of multiple ML models. It should also be able to scale up or down as needed to meet the changing demands of the organization.
 - Monitoring and management: system should provide monitoring and management capabilities to ensure that ML models are performing well and to manage the versioning, rollback, and scaling of models.
@@ -109,7 +108,7 @@ An enterprise machine learning (ML) system would have several features, such as:
 - Automation: possible to reduce manual intervention and improve efficiency.  
 
 
-#### What stages requires to implement full CI/CD pipeline? 
+### What stages requires to implement full CI/CD pipeline? 
 Designing a CI/CD pipeline is depending on the organization and the application. A full CI/CD pipeline typically includes several stages, including: 
 - Source control management: managing and tracking code changes in a source control system, such as GitHub.
 - Build and test: the pipeline automatically builds the code and runs tests to ensure that the code is functional and meets the specified requirements. This may include unit tests, integration tests, and end-to-end tests.
@@ -120,7 +119,7 @@ Designing a CI/CD pipeline is depending on the organization and the application.
 - Release: involves releasing the code to end-users, which can be achieved through different ways such as blue-green deployment. 
 
 
-#### Time and memory complexity of the code
+### Time and memory complexity of the code
 Time and memory complexity analysis is the process of determining how the running time or memory usage of a program increases as the input size grows. It involves examining the algorithms and data structures used in the code, and determining how they affect the overall performance of the program.
 
 The excerise provided is an implementation of linear regression using stochastic gradient descent (SGD). The class SimpleLinearRegression has fit, predict and input validation methods, and an additional method for optimizing the parameters of the model using GridSearchCV.
