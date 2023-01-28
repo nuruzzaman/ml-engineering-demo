@@ -5,6 +5,7 @@ from sklearn.ensemble import GradientBoostingRegressor
 from sklearn.model_selection import GridSearchCV, KFold
 from sklearn.metrics import mean_squared_error, r2_score
 from simple_linear_regr_utils import generate_data, evaluate
+from sklearn.preprocessing import StandardScaler
 
 
 class Test1:
@@ -13,7 +14,7 @@ class Test1:
     using stochastic gradient descent (SGD) to fit the model.
     """
 
-    def __init__(self, iterations=15000, lr=0.1, l2=0.01, reg_coef=0.01):
+    def __init__(self, iterations=15000, lr=0.1, l2=0, reg_coef=0.01):
         self.iterations = iterations # number of iterations the fit method will be called
         self.lr = lr # The learning rate
         self.losses = [] # A list to hold the history of the calculated losses
@@ -21,7 +22,17 @@ class Test1:
         self.reg_coef = reg_coef
         self.l2 = l2
         self.coef_ = None
-        self.intercept_ = None
+
+    def _init_weights(self, X, y):
+        """
+        :param X: The training set
+        """
+        n_samples, n_features = X.shape
+        # Initializes the weights (slope and intercept) with random values.
+        weights = np.random.normal(size=X.shape[1] + 1)
+        # self.W = weights[:X.shape[1]].reshape(-1, X.shape[1])
+        self.W = np.linalg.inv(X.T.dot(X) + self.l2 * np.eye(n_features)).dot(X.T).dot(y)
+        self.b = weights[-1]
 
     def _loss(self, y, y_hat):
         """
@@ -36,15 +47,6 @@ class Test1:
         reg_loss = self.reg_coef * (self.coef_ ** 2).sum()
         self.losses.append(loss)
         return loss + reg_loss
-
-    def _init_weights(self, X):
-        """
-        :param X: The training set
-        """
-        # Initializes the weights (slope and intercept) with random values.
-        weights = np.random.normal(size=X.shape[1] + 1)
-        self.W = weights[:X.shape[1]].reshape(-1, X.shape[1])
-        self.b = weights[-1]
 
     def _sgd(self, X, y, y_hat):
         """
@@ -61,7 +63,7 @@ class Test1:
         # Updates the weights using W and b using the learning rate and the values for dW and db
         self.W = self.W - self.lr * dW
         self.b = self.b - self.lr * db
-        return dW, db
+        return np.concatenate((dW.ravel(), [db])) + self.l2 * np.concatenate((self.W.ravel(), [0]))
 
     def fit(self, X, y):
         """
@@ -70,23 +72,20 @@ class Test1:
         :return:
         """
         self.input_validation(X)
-        self._init_weights(X)
+        self._init_weights(X, y)
 
         # Initialize the parameters
-        n_samples, n_features = X.shape
-        self.coef_ = np.zeros(n_features)
-        self.intercept_ = 0
+        rgen = np.random.RandomState(1)
+        self.coef_ = rgen.normal(loc=0.0, scale=0.01, size=1 + X.shape[1])
 
         # Compute the loss and gradient
         for i in range(self.iterations + 1):
+
             y_hat = self.predict(X)
             loss = self._loss(y, y_hat)
             dW, db = self._sgd(X, y, y_hat)
 
             # Update the parameters
-            # self.coef_ -= self.lr * grad[:-1]
-            # self.intercept_ -= self.lr * grad[-1]
-
             self.W -= self.lr * dW
             self.b -= self.lr * db
 
@@ -108,7 +107,7 @@ class Test1:
 
         # Calculate the predicted output y_hat.
         # remember the function of a line is defined as y = WX + b
-        y_hat = np.dot(X, self.W) + self.b
+        y_hat = np.dot(X, self.W.T) + self.b
         return y_hat
 
     def input_validation(self, X):
@@ -148,17 +147,22 @@ class Test1:
 
 
 if __name__ == "__main__":
-    model = Test1()
     X_train, y_train, X_test, y_test = generate_data()
 
     # Hyperparam optimization
     # model.params_optimization(X_train, y_train, X_test, y_test)
 
-    # Training
-    model.fit(X_train, y_train)
-    predicted = model.predict(X_test)
+    # StandardScaler to normalize the data
+    scaler = StandardScaler()
+    X_train_scaled = scaler.fit_transform(X_train)
+    X_test_scaled = scaler.transform(X_test)
 
-    r2 = evaluate(model, X_test, y_test, predicted, 'plot_output.png')
+    # Training
+    model = Test1()
+    model.fit(X_train_scaled, y_train)
+    predicted = model.predict(X_test_scaled)
+
+    r2 = evaluate(model, X_test_scaled, y_test, predicted, 'plot_output.png')
     if r2 >= 0.4:
         # Save model if r2_score>0.4
         with open("Diabetes.pkl", "wb") as file:

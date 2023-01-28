@@ -20,7 +20,6 @@ class SimpleLinearRegression:
         self.W, self.b = None, None # the slope and the intercept of the model
         self.reg_coef = reg_coef
         self.coef_ = None
-        self.intercept_ = None
         self.l2 = l2
 
     def _loss(self, y, y_hat):
@@ -75,7 +74,6 @@ class SimpleLinearRegression:
         # Initialize the parameters
         n_samples, n_features = X.shape
         self.coef_ = np.zeros(n_features)
-        self.intercept_ = 0
 
         # Compute the loss and gradient
         for i in range(self.iterations + 1):
@@ -85,7 +83,6 @@ class SimpleLinearRegression:
 
             # Update the parameters
             self.coef_ -= self.lr * grad[:-1]
-            self.intercept_ -= self.lr * grad[-1]
 
             # Regularization
             self.coef_ = self.coef_ - (self.lr * self.l2 * self.coef_)
