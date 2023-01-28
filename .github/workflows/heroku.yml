@@ -16,24 +16,18 @@ jobs:
 
       - name: Build, Push and Release a Docker container to Heroku.
         uses: gonuit/heroku-docker-deploy@v1.3.3
+        
         with:
-          # email: ${{ secrets.HEROKU_EMAIL }}
-          email: dr.zaman1981@gmail.com
+          email: ${{ secrets.HEROKU_EMAIL }}
           
-          # heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
-          heroku_api_key: 0677226f-1b61-413d-b98d-a00e1d895682
+          heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
           
-          # heroku_app_name: ${{ secrets.HEROKU_APP_NAME }}
-          heroku_app_name: ml-engineering-demo
+          heroku_app_name: ${{ secrets.HEROKU_APP_NAME }}
 
-          # (Optional, default: "./")
           dockerfile_directory: ./
 
-          # (Optional, default: "Dockerfile")
           dockerfile_name: Dockerfile
 
-          # (Optional, "--no-cache", default: "")
           docker_options: ""
 
-          # (Optional, default: "web")
           process_type: web
