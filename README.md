@@ -21,14 +21,15 @@ The challenge is designed to test a large variety of skills that a machine learn
  
 #### Solution Overview 
 
-The solution works end-to-end from loading diabetes dataset, train the model, predict, save the model, reload it for inference from web browser, build docker image, deploy it in Heroku through CI/CD pipeline. The test solution can be accessible at https://ml-engineering-demo.herokuapp.com/ 
+The solution works end-to-end from loading diabetes dataset, train the model, predict, save the model, reload it for inference from web browser, build docker image, deploy it on Heroku through CI/CD pipeline. The test solution can be accessible at https://ml-engineering-demo.herokuapp.com/ 
 
 My solution also includes the following: 
+- Create model and store model artifacts 
 - Hyper-parameter optimization technique 
 - Unit tests 
-- Capture application logs
-- Store model artifacts  
-- CI/CD Pipeline for Heroku and DockerHub 
+- Capture application logs 
+- Create Flask Web App that loads ML model and inferences
+- CI/CD Pipeline for automated deployment on Heroku and DockerHub 
 - Flexibile intregration with other systems or platforms
 
 Note: as there is only one feature, so data preparation, feature engineering was not implemented. 
@@ -81,6 +82,7 @@ There is another automated pipeline for DockerHub as well. You can find docker i
 #### High-level architecture diagram of the implementation
 ![architecture-diagram.png](architecture-diagram.png) 
    
+##Key points to remember
 
 #### What components an enterprise machine learning system would have? 
 An enterprise ML system could have several components, including:

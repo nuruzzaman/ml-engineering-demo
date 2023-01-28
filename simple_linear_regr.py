@@ -136,7 +136,8 @@ if __name__ == "__main__":
     r2 = evaluate(model, X_test, y_test, predicted)
     if r2 >= 0.4:
         # Save model if r2_score>0.4
-        pickle.dump(model, open("Diabetes.pkl", "wb"))
+        with open("Diabetes.pkl", "wb") as file:
+            pickle.dump(model, file)
 
         # Load existing model
         loaded_model = pickle.load(open("Diabetes.pkl", "rb"))
