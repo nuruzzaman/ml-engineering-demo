@@ -2,8 +2,8 @@ import numpy as np
 import pickle
 from numpy import ravel
 from sklearn.ensemble import GradientBoostingRegressor
-from sklearn.model_selection import GridSearchCV, cross_val_score, RepeatedKFold
-from sklearn.metrics import make_scorer, mean_squared_error, r2_score
+from sklearn.model_selection import GridSearchCV, KFold
+from sklearn.metrics import mean_squared_error, r2_score
 from simple_linear_regr_utils import generate_data, evaluate
 
 
@@ -67,15 +67,15 @@ class SimpleLinearRegression:
         self.input_validation(X)
 
         self._init_weights(X)
-        y_hat = self.predict(X)
-        loss = self._loss(y, y_hat)
-        print(f"Initial Loss: {loss}")
+
         for i in range(self.iterations + 1):
-            self._sgd(X, y, y_hat)
             y_hat = self.predict(X)
             loss = self._loss(y, y_hat)
-            if not i % 100:
+
+            self._sgd(X, y, y_hat)
+            if i % 100 == 0:
                 print(f"Iteration {i}, Loss: {loss}")
+        print(f"Initial Loss: {self.losses[0]}, Final Loss: {self.losses[-1]}")
 
     def predict(self, X):
         """
@@ -104,12 +104,14 @@ class SimpleLinearRegression:
         param_grid = {'learning_rate': [0.1, 0.01, 0.001],
                       'n_estimators': [500, 1000],
                       'max_depth': [4, 6, 8, 10],
-                      'subsample': [0.9, 0.5, 0.2, 0.1]
+                      'subsample': [0.9, 0.5, 0.2, 0.1],
+                      'min_samples_split': [2, 4, 6],
+                      'min_samples_leaf': [1, 2, 4]
                       }
 
         # Fit the grid search and find best params
         GBR = GradientBoostingRegressor()
-        cv = RepeatedKFold(n_splits=10, n_repeats=3, random_state=1)
+        cv = KFold(n_splits=5, shuffle=True, random_state=42)
         grid_search = GridSearchCV(estimator=GBR, param_grid=param_grid, cv=cv,
                                    verbose=1, n_jobs=-1, scoring='r2', return_train_score=True)
         grid_search.fit(X_train, ravel(y_train))
@@ -128,12 +130,15 @@ if __name__ == "__main__":
     model = SimpleLinearRegression()
     X_train, y_train, X_test, y_test = generate_data()
 
+    # Hyperparam optimization
     # model.params_optimization(X_train, y_train, X_test, y_test)
 
+    # Training
     model.fit(X_train, y_train)
     predicted = model.predict(X_test)
 
-    r2 = evaluate(model, X_test, y_test, predicted)
+    # Evaluate and save plotted graph
+    r2 = evaluate(model, X_test, y_test, predicted, 'plotted_graph.png')
     if r2 >= 0.4:
         # Save model if r2_score>0.4
         with open("Diabetes.pkl", "wb") as file:
