@@ -132,14 +132,16 @@ if __name__ == "__main__":
 
     model.fit(X_train, y_train)
     predicted = model.predict(X_test)
-    evaluate(model, X_test, y_test, predicted)
 
-    # Save trained model to file
-    pickle.dump(model, open("Diabetes.pkl", "wb"))
-    # Load model
-    loaded_model = pickle.load(open("Diabetes.pkl", "rb"))
+    r2 = evaluate(model, X_test, y_test, predicted)
+    if r2 >= 0.4:
+        # Save model if r2_score>0.4
+        pickle.dump(model, open("Diabetes.pkl", "wb"))
 
-    # Make prediction on unseen data
-    X = np.array([[1], [2], [3]])
-    y = loaded_model.predict(X)
-    print('Predicted value: ', y)
+        # Load existing model
+        loaded_model = pickle.load(open("Diabetes.pkl", "rb"))
+
+        # Make prediction on unseen data
+        X = np.array([[1], [2], [3]])
+        y = loaded_model.predict(X)
+        print('Predicted value: ', y)
