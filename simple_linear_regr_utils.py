@@ -56,3 +56,4 @@ def evaluate(model, X, y, y_predicted):
         print("****** Success ******")
     else:
         print("****** Failed ******")
+    return r2
