@@ -7,21 +7,21 @@ from sklearn.metrics import mean_squared_error, r2_score
 from simple_linear_regr_utils import generate_data, evaluate
 
 
-class SimpleLinearRegression:
+class Test1:
     """
     This is a simple implementation of linear regression
     using stochastic gradient descent (SGD) to fit the model.
     """
 
-    def __init__(self, iterations=15000, lr=0.1, l2=0.1, reg_coef=0.01):
+    def __init__(self, iterations=15000, lr=0.1, l2=0.01, reg_coef=0.01):
         self.iterations = iterations # number of iterations the fit method will be called
         self.lr = lr # The learning rate
         self.losses = [] # A list to hold the history of the calculated losses
         self.W, self.b = None, None # the slope and the intercept of the model
         self.reg_coef = reg_coef
+        self.l2 = l2
         self.coef_ = None
         self.intercept_ = None
-        self.l2 = l2
 
     def _loss(self, y, y_hat):
         """
@@ -61,7 +61,7 @@ class SimpleLinearRegression:
         # Updates the weights using W and b using the learning rate and the values for dW and db
         self.W = self.W - self.lr * dW
         self.b = self.b - self.lr * db
-        return np.concatenate((dW.ravel(), [db]))
+        return dW, db
 
     def fit(self, X, y):
         """
@@ -81,11 +81,14 @@ class SimpleLinearRegression:
         for i in range(self.iterations + 1):
             y_hat = self.predict(X)
             loss = self._loss(y, y_hat)
-            grad = self._sgd(X, y, y_hat)
+            dW, db = self._sgd(X, y, y_hat)
 
             # Update the parameters
-            self.coef_ -= self.lr * grad[:-1]
-            self.intercept_ -= self.lr * grad[-1]
+            # self.coef_ -= self.lr * grad[:-1]
+            # self.intercept_ -= self.lr * grad[-1]
+
+            self.W -= self.lr * dW
+            self.b -= self.lr * db
 
             # Regularization
             self.coef_ = self.coef_ - (self.lr * self.l2 * self.coef_)
@@ -105,7 +108,7 @@ class SimpleLinearRegression:
 
         # Calculate the predicted output y_hat.
         # remember the function of a line is defined as y = WX + b
-        y_hat = np.dot(X, self.W.T) + self.b
+        y_hat = np.dot(X, self.W) + self.b
         return y_hat
 
     def input_validation(self, X):
@@ -145,7 +148,7 @@ class SimpleLinearRegression:
 
 
 if __name__ == "__main__":
-    model = SimpleLinearRegression()
+    model = Test1()
     X_train, y_train, X_test, y_test = generate_data()
 
     # Hyperparam optimization
