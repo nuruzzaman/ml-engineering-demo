@@ -8,9 +8,10 @@
 #### Solution Includes 
 - The solution works end-to-end from loading diabetes dataset, train the model, predict, save the model, reload it for inference from web, build docker image, deploy it in production through CI/CD pipeline.   
 - Unit tests 
-- CI/CD Pipeline 
+- CI/CD Pipeline for Heroku and Docker 
 - Capture application logs  
 - Store Model Artifacts 
+- Live Heroku App: https://ml-engineering-demo.herokuapp.com/ 
 
 
 ### Installation packages
