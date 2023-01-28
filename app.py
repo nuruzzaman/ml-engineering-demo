@@ -1,6 +1,7 @@
 import logging
 import pickle
 import ast
+import numpy as np
 from logging.handlers import TimedRotatingFileHandler
 
 from flask import Flask, request, render_template, jsonify
@@ -44,9 +45,8 @@ def stream():
     # Make prediction on the given data
     y_pred = load_model.predict([[X]])
     y = y_pred[0]
-    mgs = f"The prediction of {X} is: {y[0]:.3f}"
-    print(f'Y value is: {y_pred[0]}, when X is {X}')
-    return mgs
+    final_predict_mgs = f"The prediction of {X} is: {y[0]:.3f}"
+    return final_predict_mgs
 
 
 @app.route('/batch', methods=['POST'])
@@ -54,23 +54,19 @@ def batch():
     # Get the payload from the request
     payload = request.get_json()
 
-    # Extract the input feature from the payload
+    # Extract the input feature from the payload and convert into `np.array`
     X_input = payload['data']
     X = ast.literal_eval(X_input)
+    X = np.array([[i] for i in X])
 
-    pred_list = []
-    if len(X)>0:
-        for i in X:
-            # Make prediction on the given data
-            y_pred = load_model.predict([[i]])
-            y = y_pred[0]
-            print(f'Y value is: {y[0]}, when X is {i}')
-            pred_list.append(y[0])
+    # Make prediction on the input data
+    pred_list = load_model.predict(X)
 
-    # convert list to string
-    string_list = ["{:.3f}".format(i) for i in pred_list]
-    final_predictions = '\n'.join(string_list)
-    return final_predictions
+    string_list = []
+    for x, i in zip(X, pred_list):
+        string_list.append("Prediction of {} is: {:.3f}\n".format(x[0], i[0]))
+    final_predict_mgs = ''.join(string_list)
+    return final_predict_mgs
 
 
 if __name__ == '__main__':

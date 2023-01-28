@@ -1,6 +1,6 @@
 import numpy as np
 from sklearn.datasets import load_diabetes
-from sklearn.metrics import mean_squared_error, r2_score
+from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
 import matplotlib.pyplot as plt
 
 
@@ -32,7 +32,7 @@ def generate_data():
     return diabetes_X_train, diabetes_y_train, diabetes_X_test, diabetes_y_test
 
 
-def evaluate(model, X, y, y_predicted):
+def evaluate(model, X, y, y_predicted, plot_filename=None):
     """ Calculates and prints evaluation metrics. """
     # The coefficients
     print(f"Slope: {model.W}; Intercept: {model.b}")
@@ -40,6 +40,10 @@ def evaluate(model, X, y, y_predicted):
     # The mean squared error
     mse = mean_squared_error(y, y_predicted)
     print(f"Mean squared error: {mse:.2f}")
+
+    # The mean absolute error
+    mae = mean_absolute_error(y, y_predicted)
+    print(f"Mean absolute error: {mae:.2f}")
 
     # The coefficient of determination: 1 is perfect prediction (how much variance in the target variable)
     r2 = r2_score(y, y_predicted)
@@ -50,6 +54,10 @@ def evaluate(model, X, y, y_predicted):
     plt.plot(X, y_predicted, color="blue", linewidth=3)
     plt.xticks(())
     plt.yticks(())
+
+    plot_filename = 'test'
+    if plot_filename:
+        plt.savefig(plot_filename)
     plt.show()
 
     if r2 >= 0.4:

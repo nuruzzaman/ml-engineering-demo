@@ -95,7 +95,7 @@ An enterprise ML system could have several components, including:
 - Workflow management: for managing and automating the various stages of the ML pipeline, such as data preparation, model training, model deployment, and monitoring. This may include using workflow management systems, such as Airflow, Prefect, etc.
 
 
-### what other features an enterprise machine learning system would have? 
+### What other features an enterprise machine learning system would have? 
 An enterprise machine learning (ML) system would have several features, such as:
 - Scalability: able to handle large amounts of data and support the training and deployment of multiple ML models. It should also be able to scale up or down as needed to meet the changing demands of the organization.
 - Monitoring and management: system should provide monitoring and management capabilities to ensure that ML models are performing well and to manage the versioning, rollback, and scaling of models.
@@ -128,3 +128,11 @@ The excerise provided is an implementation of linear regression using stochastic
 - predict: 
 - params_optimization: depends on the complexity of the estimator used, in this case GradientBoostingRegressor and number of parameters, samples & features and the number of boosting stages. 
 
+### Few suggestions to improve the model 
+- Improve the stopping criteria: Instead of running the model for a fixed number of iterations, you can use a convergence criteria such as checking the change in loss or the change in parameters after each iteration.
+- Use regularization: Regularization techniques such as L1 or L2 regularization can be used to prevent overfitting.
+- Feature scaling: Scale the input features before training the model to ensure that all features are on the same scale. This will improve the performance of the model and make the optimization process faster.
+- Add validation set: Use a separate validation set to evaluate the model during training, to prevent overfitting and to select the best model.
+- Add more feature: you could add more feature to your data set, so that the model can learn more about the data.
+- Add cross validation: Use k-fold cross validation to evaluate the performance of the model on different subsets of the data, which will give a better estimate of the model's performance.
+- Implement other regression algorithms. 

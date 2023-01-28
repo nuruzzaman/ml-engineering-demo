@@ -2530,3 +2530,816 @@ Traceback (most recent call last):
 ValueError: invalid literal for int() with base 10: '12.1'
 2023-01-28 00:09:33,464 : INFO : 127.0.0.1 - - [28/Jan/2023 00:09:33] "[35m[1mPOST /stream HTTP/1.1[0m" 500 -
 2023-01-28 00:09:38,917 : INFO : 127.0.0.1 - - [28/Jan/2023 00:09:38] "GET / HTTP/1.1" 200 -
+2023-01-28 18:56:08,925 : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2023-01-28 18:56:08,926 : INFO : [33mPress CTRL+C to quit[0m
+2023-01-28 18:56:22,205 : INFO : 127.0.0.1 - - [28/Jan/2023 18:56:22] "GET / HTTP/1.1" 200 -
+2023-01-28 18:56:22,444 : INFO : 127.0.0.1 - - [28/Jan/2023 18:56:22] "GET /vendor/bootstrap/css/bootstrap.css HTTP/1.1" 200 -
+2023-01-28 18:56:22,548 : INFO : 127.0.0.1 - - [28/Jan/2023 18:56:22] "GET /vendor/fontawesome-free/css/all.min.css HTTP/1.1" 200 -
+2023-01-28 18:56:22,556 : INFO : 127.0.0.1 - - [28/Jan/2023 18:56:22] "GET /vendor/foundation-icons/foundation-icons.css HTTP/1.1" 200 -
+2023-01-28 18:56:22,563 : INFO : 127.0.0.1 - - [28/Jan/2023 18:56:22] "GET /resources/css/custom-style.css HTTP/1.1" 200 -
+2023-01-28 18:56:22,602 : INFO : 127.0.0.1 - - [28/Jan/2023 18:56:22] "GET /vendor/jquery/jquery-3.3.1.min.js HTTP/1.1" 200 -
+2023-01-28 18:56:22,618 : INFO : 127.0.0.1 - - [28/Jan/2023 18:56:22] "GET /resources/js/http_resonse.js HTTP/1.1" 200 -
+2023-01-28 18:56:22,955 : INFO : 127.0.0.1 - - [28/Jan/2023 18:56:22] "GET /vendor/foundation-icons/foundation-icons.woff HTTP/1.1" 200 -
+2023-01-28 18:56:22,958 : INFO : 127.0.0.1 - - [28/Jan/2023 18:56:22] "GET /resources/images/bg.png HTTP/1.1" 200 -
+2023-01-28 18:56:22,980 : INFO : 127.0.0.1 - - [28/Jan/2023 18:56:22] "GET /resources/images/chat-bg.png HTTP/1.1" 200 -
+2023-01-28 18:56:24,776 : INFO : 127.0.0.1 - - [28/Jan/2023 18:56:24] "POST /stream HTTP/1.1" 200 -
+2023-01-28 18:56:27,148 : ERROR : Exception on /batch [POST]
+Traceback (most recent call last):
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File ".\app.py", line 73, in batch
+    string_list = ["{:.3f}".format(i) for i in pred_list]
+  File ".\app.py", line 73, in <listcomp>
+    string_list = ["{:.3f}".format(i) for i in pred_list]
+TypeError: unsupported format string passed to numpy.ndarray.__format__
+2023-01-28 18:56:27,162 : INFO : 127.0.0.1 - - [28/Jan/2023 18:56:27] "[35m[1mPOST /batch HTTP/1.1[0m" 500 -
+2023-01-28 18:57:06,950 : INFO : 127.0.0.1 - - [28/Jan/2023 18:57:06] "GET / HTTP/1.1" 200 -
+2023-01-28 18:57:07,269 : INFO : 127.0.0.1 - - [28/Jan/2023 18:57:07] "[36mGET /vendor/bootstrap/css/bootstrap.css HTTP/1.1[0m" 304 -
+2023-01-28 18:57:07,270 : INFO : 127.0.0.1 - - [28/Jan/2023 18:57:07] "[36mGET /vendor/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+2023-01-28 18:57:07,271 : INFO : 127.0.0.1 - - [28/Jan/2023 18:57:07] "[36mGET /vendor/foundation-icons/foundation-icons.css HTTP/1.1[0m" 304 -
+2023-01-28 18:57:07,273 : INFO : 127.0.0.1 - - [28/Jan/2023 18:57:07] "[36mGET /vendor/jquery/jquery-3.3.1.min.js HTTP/1.1[0m" 304 -
+2023-01-28 18:57:07,274 : INFO : 127.0.0.1 - - [28/Jan/2023 18:57:07] "[36mGET /resources/css/custom-style.css HTTP/1.1[0m" 304 -
+2023-01-28 18:57:07,276 : INFO : 127.0.0.1 - - [28/Jan/2023 18:57:07] "[36mGET /resources/js/http_resonse.js HTTP/1.1[0m" 304 -
+2023-01-28 18:57:07,608 : INFO : 127.0.0.1 - - [28/Jan/2023 18:57:07] "[36mGET /vendor/foundation-icons/foundation-icons.woff HTTP/1.1[0m" 304 -
+2023-01-28 18:57:07,610 : INFO : 127.0.0.1 - - [28/Jan/2023 18:57:07] "[36mGET /resources/images/chat-bg.png HTTP/1.1[0m" 304 -
+2023-01-28 18:57:07,613 : INFO : 127.0.0.1 - - [28/Jan/2023 18:57:07] "[36mGET /resources/images/bg.png HTTP/1.1[0m" 304 -
+2023-01-28 18:57:09,150 : ERROR : Exception on /batch [POST]
+Traceback (most recent call last):
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File ".\app.py", line 73, in batch
+    string_list = ["{:.3f}".format(i) for i in pred_list]
+  File ".\app.py", line 73, in <listcomp>
+    string_list = ["{:.3f}".format(i) for i in pred_list]
+TypeError: unsupported format string passed to numpy.ndarray.__format__
+2023-01-28 18:57:09,152 : INFO : 127.0.0.1 - - [28/Jan/2023 18:57:09] "[35m[1mPOST /batch HTTP/1.1[0m" 500 -
+2023-01-28 18:57:15,336 : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2023-01-28 18:57:15,336 : INFO : [33mPress CTRL+C to quit[0m
+2023-01-28 18:57:16,918 : INFO : 127.0.0.1 - - [28/Jan/2023 18:57:16] "GET / HTTP/1.1" 200 -
+2023-01-28 18:57:17,180 : INFO : 127.0.0.1 - - [28/Jan/2023 18:57:17] "[36mGET /vendor/bootstrap/css/bootstrap.css HTTP/1.1[0m" 304 -
+2023-01-28 18:57:17,250 : INFO : 127.0.0.1 - - [28/Jan/2023 18:57:17] "[36mGET /vendor/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+2023-01-28 18:57:17,251 : INFO : 127.0.0.1 - - [28/Jan/2023 18:57:17] "[36mGET /vendor/foundation-icons/foundation-icons.css HTTP/1.1[0m" 304 -
+2023-01-28 18:57:17,253 : INFO : 127.0.0.1 - - [28/Jan/2023 18:57:17] "[36mGET /resources/css/custom-style.css HTTP/1.1[0m" 304 -
+2023-01-28 18:57:17,254 : INFO : 127.0.0.1 - - [28/Jan/2023 18:57:17] "[36mGET /vendor/jquery/jquery-3.3.1.min.js HTTP/1.1[0m" 304 -
+2023-01-28 18:57:17,255 : INFO : 127.0.0.1 - - [28/Jan/2023 18:57:17] "[36mGET /resources/js/http_resonse.js HTTP/1.1[0m" 304 -
+2023-01-28 18:57:17,583 : INFO : 127.0.0.1 - - [28/Jan/2023 18:57:17] "[36mGET /resources/images/bg.png HTTP/1.1[0m" 304 -
+2023-01-28 18:57:17,584 : INFO : 127.0.0.1 - - [28/Jan/2023 18:57:17] "[36mGET /resources/images/chat-bg.png HTTP/1.1[0m" 304 -
+2023-01-28 18:57:19,049 : ERROR : Exception on /batch [POST]
+Traceback (most recent call last):
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File ".\app.py", line 73, in batch
+    string_list = ["{:.3f}".format(i) for i in pred_list]
+  File ".\app.py", line 73, in <listcomp>
+    string_list = ["{:.3f}".format(i) for i in pred_list]
+TypeError: unsupported format string passed to numpy.ndarray.__format__
+2023-01-28 18:57:19,052 : INFO : 127.0.0.1 - - [28/Jan/2023 18:57:19] "[35m[1mPOST /batch HTTP/1.1[0m" 500 -
+2023-01-28 18:57:55,282 : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2023-01-28 18:57:55,282 : INFO : [33mPress CTRL+C to quit[0m
+2023-01-28 18:57:56,191 : INFO : 127.0.0.1 - - [28/Jan/2023 18:57:56] "GET / HTTP/1.1" 200 -
+2023-01-28 18:57:56,435 : INFO : 127.0.0.1 - - [28/Jan/2023 18:57:56] "[36mGET /vendor/bootstrap/css/bootstrap.css HTTP/1.1[0m" 304 -
+2023-01-28 18:57:56,528 : INFO : 127.0.0.1 - - [28/Jan/2023 18:57:56] "[36mGET /vendor/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+2023-01-28 18:57:56,529 : INFO : 127.0.0.1 - - [28/Jan/2023 18:57:56] "[36mGET /vendor/foundation-icons/foundation-icons.css HTTP/1.1[0m" 304 -
+2023-01-28 18:57:56,531 : INFO : 127.0.0.1 - - [28/Jan/2023 18:57:56] "[36mGET /resources/css/custom-style.css HTTP/1.1[0m" 304 -
+2023-01-28 18:57:56,532 : INFO : 127.0.0.1 - - [28/Jan/2023 18:57:56] "[36mGET /vendor/jquery/jquery-3.3.1.min.js HTTP/1.1[0m" 304 -
+2023-01-28 18:57:56,533 : INFO : 127.0.0.1 - - [28/Jan/2023 18:57:56] "[36mGET /resources/js/http_resonse.js HTTP/1.1[0m" 304 -
+2023-01-28 18:57:56,866 : INFO : 127.0.0.1 - - [28/Jan/2023 18:57:56] "[36mGET /resources/images/bg.png HTTP/1.1[0m" 304 -
+2023-01-28 18:57:56,868 : INFO : 127.0.0.1 - - [28/Jan/2023 18:57:56] "[36mGET /resources/images/chat-bg.png HTTP/1.1[0m" 304 -
+2023-01-28 18:57:59,911 : ERROR : Exception on /batch [POST]
+Traceback (most recent call last):
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File ".\app.py", line 74, in batch
+    string_list = ["{:.3f}".format(i) for i in pred_list]
+  File ".\app.py", line 74, in <listcomp>
+    string_list = ["{:.3f}".format(i) for i in pred_list]
+TypeError: unsupported format string passed to numpy.ndarray.__format__
+2023-01-28 18:57:59,913 : INFO : 127.0.0.1 - - [28/Jan/2023 18:57:59] "[35m[1mPOST /batch HTTP/1.1[0m" 500 -
+2023-01-28 18:58:10,726 : ERROR : Exception on /batch [POST]
+Traceback (most recent call last):
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File ".\app.py", line 74, in batch
+    string_list = ["{:.3f}".format(i) for i in pred_list]
+  File ".\app.py", line 74, in <listcomp>
+    string_list = ["{:.3f}".format(i) for i in pred_list]
+TypeError: unsupported format string passed to numpy.ndarray.__format__
+2023-01-28 18:58:10,727 : INFO : 127.0.0.1 - - [28/Jan/2023 18:58:10] "[35m[1mPOST /batch HTTP/1.1[0m" 500 -
+2023-01-28 19:02:45,937 : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2023-01-28 19:02:45,937 : INFO : [33mPress CTRL+C to quit[0m
+2023-01-28 19:02:49,431 : INFO : 127.0.0.1 - - [28/Jan/2023 19:02:49] "GET / HTTP/1.1" 200 -
+2023-01-28 19:02:49,691 : INFO : 127.0.0.1 - - [28/Jan/2023 19:02:49] "[36mGET /vendor/bootstrap/css/bootstrap.css HTTP/1.1[0m" 304 -
+2023-01-28 19:02:49,767 : INFO : 127.0.0.1 - - [28/Jan/2023 19:02:49] "[36mGET /vendor/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+2023-01-28 19:02:49,778 : INFO : 127.0.0.1 - - [28/Jan/2023 19:02:49] "[36mGET /vendor/foundation-icons/foundation-icons.css HTTP/1.1[0m" 304 -
+2023-01-28 19:02:49,784 : INFO : 127.0.0.1 - - [28/Jan/2023 19:02:49] "[36mGET /resources/css/custom-style.css HTTP/1.1[0m" 304 -
+2023-01-28 19:02:49,812 : INFO : 127.0.0.1 - - [28/Jan/2023 19:02:49] "[36mGET /vendor/jquery/jquery-3.3.1.min.js HTTP/1.1[0m" 304 -
+2023-01-28 19:02:49,823 : INFO : 127.0.0.1 - - [28/Jan/2023 19:02:49] "[36mGET /resources/js/http_resonse.js HTTP/1.1[0m" 304 -
+2023-01-28 19:02:50,150 : INFO : 127.0.0.1 - - [28/Jan/2023 19:02:50] "[36mGET /resources/images/bg.png HTTP/1.1[0m" 304 -
+2023-01-28 19:02:50,154 : INFO : 127.0.0.1 - - [28/Jan/2023 19:02:50] "[36mGET /resources/images/chat-bg.png HTTP/1.1[0m" 304 -
+2023-01-28 19:02:51,121 : INFO : 127.0.0.1 - - [28/Jan/2023 19:02:51] "POST /stream HTTP/1.1" 200 -
+2023-01-28 19:02:51,736 : INFO : 127.0.0.1 - - [28/Jan/2023 19:02:51] "POST /stream HTTP/1.1" 200 -
+2023-01-28 19:02:51,952 : INFO : 127.0.0.1 - - [28/Jan/2023 19:02:51] "POST /stream HTTP/1.1" 200 -
+2023-01-28 19:02:51,997 : INFO : 127.0.0.1 - - [28/Jan/2023 19:02:51] "POST /stream HTTP/1.1" 200 -
+2023-01-28 19:02:55,546 : INFO : 127.0.0.1 - - [28/Jan/2023 19:02:55] "GET / HTTP/1.1" 200 -
+2023-01-28 19:02:55,883 : INFO : 127.0.0.1 - - [28/Jan/2023 19:02:55] "[36mGET /vendor/bootstrap/css/bootstrap.css HTTP/1.1[0m" 304 -
+2023-01-28 19:02:55,885 : INFO : 127.0.0.1 - - [28/Jan/2023 19:02:55] "[36mGET /vendor/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+2023-01-28 19:02:55,887 : INFO : 127.0.0.1 - - [28/Jan/2023 19:02:55] "[36mGET /resources/css/custom-style.css HTTP/1.1[0m" 304 -
+2023-01-28 19:02:55,889 : INFO : 127.0.0.1 - - [28/Jan/2023 19:02:55] "[36mGET /vendor/foundation-icons/foundation-icons.css HTTP/1.1[0m" 304 -
+2023-01-28 19:02:55,890 : INFO : 127.0.0.1 - - [28/Jan/2023 19:02:55] "[36mGET /vendor/jquery/jquery-3.3.1.min.js HTTP/1.1[0m" 304 -
+2023-01-28 19:02:55,891 : INFO : 127.0.0.1 - - [28/Jan/2023 19:02:55] "[36mGET /resources/js/http_resonse.js HTTP/1.1[0m" 304 -
+2023-01-28 19:02:56,207 : INFO : 127.0.0.1 - - [28/Jan/2023 19:02:56] "[36mGET /resources/images/bg.png HTTP/1.1[0m" 304 -
+2023-01-28 19:02:56,208 : INFO : 127.0.0.1 - - [28/Jan/2023 19:02:56] "[36mGET /resources/images/chat-bg.png HTTP/1.1[0m" 304 -
+2023-01-28 19:02:59,901 : ERROR : Exception on /batch [POST]
+Traceback (most recent call last):
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File ".\app.py", line 75, in batch
+    string_list = ["{:.3f}".format(i) for i in pred_list]
+  File ".\app.py", line 75, in <listcomp>
+    string_list = ["{:.3f}".format(i) for i in pred_list]
+TypeError: unsupported format string passed to numpy.ndarray.__format__
+2023-01-28 19:02:59,913 : INFO : 127.0.0.1 - - [28/Jan/2023 19:02:59] "[35m[1mPOST /batch HTTP/1.1[0m" 500 -
+2023-01-28 19:04:53,954 : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2023-01-28 19:04:53,954 : INFO : [33mPress CTRL+C to quit[0m
+2023-01-28 19:04:57,265 : INFO : 127.0.0.1 - - [28/Jan/2023 19:04:57] "GET / HTTP/1.1" 200 -
+2023-01-28 19:04:57,523 : INFO : 127.0.0.1 - - [28/Jan/2023 19:04:57] "[36mGET /vendor/bootstrap/css/bootstrap.css HTTP/1.1[0m" 304 -
+2023-01-28 19:04:57,587 : INFO : 127.0.0.1 - - [28/Jan/2023 19:04:57] "[36mGET /vendor/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+2023-01-28 19:04:57,588 : INFO : 127.0.0.1 - - [28/Jan/2023 19:04:57] "[36mGET /vendor/foundation-icons/foundation-icons.css HTTP/1.1[0m" 304 -
+2023-01-28 19:04:57,590 : INFO : 127.0.0.1 - - [28/Jan/2023 19:04:57] "[36mGET /resources/css/custom-style.css HTTP/1.1[0m" 304 -
+2023-01-28 19:04:57,591 : INFO : 127.0.0.1 - - [28/Jan/2023 19:04:57] "[36mGET /vendor/jquery/jquery-3.3.1.min.js HTTP/1.1[0m" 304 -
+2023-01-28 19:04:57,593 : INFO : 127.0.0.1 - - [28/Jan/2023 19:04:57] "[36mGET /resources/js/http_resonse.js HTTP/1.1[0m" 304 -
+2023-01-28 19:04:57,910 : INFO : 127.0.0.1 - - [28/Jan/2023 19:04:57] "[36mGET /resources/images/bg.png HTTP/1.1[0m" 304 -
+2023-01-28 19:04:57,912 : INFO : 127.0.0.1 - - [28/Jan/2023 19:04:57] "[36mGET /resources/images/chat-bg.png HTTP/1.1[0m" 304 -
+2023-01-28 19:05:00,537 : ERROR : Exception on /batch [POST]
+Traceback (most recent call last):
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File ".\app.py", line 75, in batch
+    string_list = ["{:.3f}".format(i) for i in pred_list]
+  File ".\app.py", line 75, in <listcomp>
+    string_list = ["{:.3f}".format(i) for i in pred_list]
+TypeError: unsupported format string passed to numpy.ndarray.__format__
+2023-01-28 19:05:00,538 : INFO : 127.0.0.1 - - [28/Jan/2023 19:05:00] "[35m[1mPOST /batch HTTP/1.1[0m" 500 -
+2023-01-28 19:05:16,607 : ERROR : Exception on /batch [POST]
+Traceback (most recent call last):
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File ".\app.py", line 75, in batch
+    string_list = ["{:.3f}".format(i) for i in pred_list]
+  File ".\app.py", line 75, in <listcomp>
+    string_list = ["{:.3f}".format(i) for i in pred_list]
+TypeError: unsupported format string passed to numpy.ndarray.__format__
+2023-01-28 19:05:16,608 : INFO : 127.0.0.1 - - [28/Jan/2023 19:05:16] "[35m[1mPOST /batch HTTP/1.1[0m" 500 -
+2023-01-28 19:05:53,437 : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2023-01-28 19:05:53,437 : INFO : [33mPress CTRL+C to quit[0m
+2023-01-28 19:05:54,998 : INFO : 127.0.0.1 - - [28/Jan/2023 19:05:54] "GET / HTTP/1.1" 200 -
+2023-01-28 19:05:55,263 : INFO : 127.0.0.1 - - [28/Jan/2023 19:05:55] "[36mGET /vendor/bootstrap/css/bootstrap.css HTTP/1.1[0m" 304 -
+2023-01-28 19:05:55,325 : INFO : 127.0.0.1 - - [28/Jan/2023 19:05:55] "[36mGET /vendor/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+2023-01-28 19:05:55,328 : INFO : 127.0.0.1 - - [28/Jan/2023 19:05:55] "[36mGET /vendor/foundation-icons/foundation-icons.css HTTP/1.1[0m" 304 -
+2023-01-28 19:05:55,329 : INFO : 127.0.0.1 - - [28/Jan/2023 19:05:55] "[36mGET /resources/css/custom-style.css HTTP/1.1[0m" 304 -
+2023-01-28 19:05:55,330 : INFO : 127.0.0.1 - - [28/Jan/2023 19:05:55] "[36mGET /vendor/jquery/jquery-3.3.1.min.js HTTP/1.1[0m" 304 -
+2023-01-28 19:05:55,332 : INFO : 127.0.0.1 - - [28/Jan/2023 19:05:55] "[36mGET /resources/js/http_resonse.js HTTP/1.1[0m" 304 -
+2023-01-28 19:05:55,665 : INFO : 127.0.0.1 - - [28/Jan/2023 19:05:55] "[36mGET /resources/images/bg.png HTTP/1.1[0m" 304 -
+2023-01-28 19:05:55,667 : INFO : 127.0.0.1 - - [28/Jan/2023 19:05:55] "[36mGET /resources/images/chat-bg.png HTTP/1.1[0m" 304 -
+2023-01-28 19:05:59,631 : ERROR : Exception on /batch [POST]
+Traceback (most recent call last):
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File ".\app.py", line 75, in batch
+    string_list = ["{:.3f}".format(i) for i in pred_list]
+  File ".\app.py", line 75, in <listcomp>
+    string_list = ["{:.3f}".format(i) for i in pred_list]
+TypeError: unsupported format string passed to numpy.ndarray.__format__
+2023-01-28 19:05:59,632 : INFO : 127.0.0.1 - - [28/Jan/2023 19:05:59] "[35m[1mPOST /batch HTTP/1.1[0m" 500 -
+2023-01-28 19:07:41,885 : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2023-01-28 19:07:41,886 : INFO : [33mPress CTRL+C to quit[0m
+2023-01-28 19:07:42,809 : INFO : 127.0.0.1 - - [28/Jan/2023 19:07:42] "GET / HTTP/1.1" 200 -
+2023-01-28 19:07:43,053 : INFO : 127.0.0.1 - - [28/Jan/2023 19:07:43] "[36mGET /vendor/bootstrap/css/bootstrap.css HTTP/1.1[0m" 304 -
+2023-01-28 19:07:43,132 : INFO : 127.0.0.1 - - [28/Jan/2023 19:07:43] "[36mGET /vendor/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+2023-01-28 19:07:43,133 : INFO : 127.0.0.1 - - [28/Jan/2023 19:07:43] "[36mGET /vendor/foundation-icons/foundation-icons.css HTTP/1.1[0m" 304 -
+2023-01-28 19:07:43,135 : INFO : 127.0.0.1 - - [28/Jan/2023 19:07:43] "[36mGET /resources/css/custom-style.css HTTP/1.1[0m" 304 -
+2023-01-28 19:07:43,136 : INFO : 127.0.0.1 - - [28/Jan/2023 19:07:43] "[36mGET /vendor/jquery/jquery-3.3.1.min.js HTTP/1.1[0m" 304 -
+2023-01-28 19:07:43,138 : INFO : 127.0.0.1 - - [28/Jan/2023 19:07:43] "[36mGET /resources/js/http_resonse.js HTTP/1.1[0m" 304 -
+2023-01-28 19:07:43,458 : INFO : 127.0.0.1 - - [28/Jan/2023 19:07:43] "[36mGET /resources/images/bg.png HTTP/1.1[0m" 304 -
+2023-01-28 19:07:43,459 : INFO : 127.0.0.1 - - [28/Jan/2023 19:07:43] "[36mGET /resources/images/chat-bg.png HTTP/1.1[0m" 304 -
+2023-01-28 19:07:45,911 : ERROR : Exception on /batch [POST]
+Traceback (most recent call last):
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File ".\app.py", line 76, in batch
+    string_list = ["{:.3f}".format(i) for i in pred_list]
+  File ".\app.py", line 76, in <listcomp>
+    string_list = ["{:.3f}".format(i) for i in pred_list]
+TypeError: unsupported format string passed to numpy.ndarray.__format__
+2023-01-28 19:07:45,912 : INFO : 127.0.0.1 - - [28/Jan/2023 19:07:45] "[35m[1mPOST /batch HTTP/1.1[0m" 500 -
+2023-01-28 19:07:50,518 : INFO : 127.0.0.1 - - [28/Jan/2023 19:07:50] "GET / HTTP/1.1" 200 -
+2023-01-28 19:07:50,783 : INFO : 127.0.0.1 - - [28/Jan/2023 19:07:50] "[36mGET /vendor/bootstrap/css/bootstrap.css HTTP/1.1[0m" 304 -
+2023-01-28 19:07:50,846 : INFO : 127.0.0.1 - - [28/Jan/2023 19:07:50] "[36mGET /vendor/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+2023-01-28 19:07:50,847 : INFO : 127.0.0.1 - - [28/Jan/2023 19:07:50] "[36mGET /vendor/foundation-icons/foundation-icons.css HTTP/1.1[0m" 304 -
+2023-01-28 19:07:50,849 : INFO : 127.0.0.1 - - [28/Jan/2023 19:07:50] "[36mGET /resources/css/custom-style.css HTTP/1.1[0m" 304 -
+2023-01-28 19:07:50,850 : INFO : 127.0.0.1 - - [28/Jan/2023 19:07:50] "[36mGET /vendor/jquery/jquery-3.3.1.min.js HTTP/1.1[0m" 304 -
+2023-01-28 19:07:50,852 : INFO : 127.0.0.1 - - [28/Jan/2023 19:07:50] "[36mGET /resources/js/http_resonse.js HTTP/1.1[0m" 304 -
+2023-01-28 19:07:51,170 : INFO : 127.0.0.1 - - [28/Jan/2023 19:07:51] "[36mGET /resources/images/bg.png HTTP/1.1[0m" 304 -
+2023-01-28 19:07:51,171 : INFO : 127.0.0.1 - - [28/Jan/2023 19:07:51] "[36mGET /resources/images/chat-bg.png HTTP/1.1[0m" 304 -
+2023-01-28 19:07:54,090 : ERROR : Exception on /batch [POST]
+Traceback (most recent call last):
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File ".\app.py", line 76, in batch
+    string_list = ["{:.3f}".format(i) for i in pred_list]
+  File ".\app.py", line 76, in <listcomp>
+    string_list = ["{:.3f}".format(i) for i in pred_list]
+TypeError: unsupported format string passed to numpy.ndarray.__format__
+2023-01-28 19:07:54,091 : INFO : 127.0.0.1 - - [28/Jan/2023 19:07:54] "[35m[1mPOST /batch HTTP/1.1[0m" 500 -
+2023-01-28 19:08:25,826 : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2023-01-28 19:08:25,826 : INFO : [33mPress CTRL+C to quit[0m
+2023-01-28 19:08:26,876 : INFO : 127.0.0.1 - - [28/Jan/2023 19:08:26] "GET / HTTP/1.1" 200 -
+2023-01-28 19:08:27,123 : INFO : 127.0.0.1 - - [28/Jan/2023 19:08:27] "[36mGET /vendor/bootstrap/css/bootstrap.css HTTP/1.1[0m" 304 -
+2023-01-28 19:08:27,200 : INFO : 127.0.0.1 - - [28/Jan/2023 19:08:27] "[36mGET /vendor/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+2023-01-28 19:08:27,202 : INFO : 127.0.0.1 - - [28/Jan/2023 19:08:27] "[36mGET /vendor/foundation-icons/foundation-icons.css HTTP/1.1[0m" 304 -
+2023-01-28 19:08:27,204 : INFO : 127.0.0.1 - - [28/Jan/2023 19:08:27] "[36mGET /resources/css/custom-style.css HTTP/1.1[0m" 304 -
+2023-01-28 19:08:27,205 : INFO : 127.0.0.1 - - [28/Jan/2023 19:08:27] "[36mGET /vendor/jquery/jquery-3.3.1.min.js HTTP/1.1[0m" 304 -
+2023-01-28 19:08:27,207 : INFO : 127.0.0.1 - - [28/Jan/2023 19:08:27] "[36mGET /resources/js/http_resonse.js HTTP/1.1[0m" 304 -
+2023-01-28 19:08:27,525 : INFO : 127.0.0.1 - - [28/Jan/2023 19:08:27] "[36mGET /resources/images/bg.png HTTP/1.1[0m" 304 -
+2023-01-28 19:08:27,528 : INFO : 127.0.0.1 - - [28/Jan/2023 19:08:27] "[36mGET /resources/images/chat-bg.png HTTP/1.1[0m" 304 -
+2023-01-28 19:08:28,913 : ERROR : Exception on /batch [POST]
+Traceback (most recent call last):
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File ".\app.py", line 77, in batch
+    string_list = ["{:.3f}".format(i) for i in pred_list]
+  File ".\app.py", line 77, in <listcomp>
+    string_list = ["{:.3f}".format(i) for i in pred_list]
+TypeError: unsupported format string passed to numpy.ndarray.__format__
+2023-01-28 19:08:28,914 : INFO : 127.0.0.1 - - [28/Jan/2023 19:08:28] "[35m[1mPOST /batch HTTP/1.1[0m" 500 -
+2023-01-28 19:10:52,272 : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2023-01-28 19:10:52,272 : INFO : [33mPress CTRL+C to quit[0m
+2023-01-28 19:10:54,622 : INFO : 127.0.0.1 - - [28/Jan/2023 19:10:54] "GET / HTTP/1.1" 200 -
+2023-01-28 19:10:54,872 : INFO : 127.0.0.1 - - [28/Jan/2023 19:10:54] "[36mGET /vendor/bootstrap/css/bootstrap.css HTTP/1.1[0m" 304 -
+2023-01-28 19:10:54,947 : INFO : 127.0.0.1 - - [28/Jan/2023 19:10:54] "[36mGET /vendor/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+2023-01-28 19:10:54,948 : INFO : 127.0.0.1 - - [28/Jan/2023 19:10:54] "[36mGET /vendor/foundation-icons/foundation-icons.css HTTP/1.1[0m" 304 -
+2023-01-28 19:10:54,949 : INFO : 127.0.0.1 - - [28/Jan/2023 19:10:54] "[36mGET /resources/css/custom-style.css HTTP/1.1[0m" 304 -
+2023-01-28 19:10:54,951 : INFO : 127.0.0.1 - - [28/Jan/2023 19:10:54] "[36mGET /vendor/jquery/jquery-3.3.1.min.js HTTP/1.1[0m" 304 -
+2023-01-28 19:10:54,952 : INFO : 127.0.0.1 - - [28/Jan/2023 19:10:54] "[36mGET /resources/js/http_resonse.js HTTP/1.1[0m" 304 -
+2023-01-28 19:10:55,278 : INFO : 127.0.0.1 - - [28/Jan/2023 19:10:55] "[36mGET /vendor/foundation-icons/foundation-icons.woff HTTP/1.1[0m" 304 -
+2023-01-28 19:10:55,281 : INFO : 127.0.0.1 - - [28/Jan/2023 19:10:55] "[36mGET /resources/images/bg.png HTTP/1.1[0m" 304 -
+2023-01-28 19:10:55,282 : INFO : 127.0.0.1 - - [28/Jan/2023 19:10:55] "[36mGET /resources/images/chat-bg.png HTTP/1.1[0m" 304 -
+2023-01-28 19:10:56,565 : ERROR : Exception on /batch [POST]
+Traceback (most recent call last):
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1842, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 2170, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The return type must be a string, dict, list, tuple with headers or status, Response instance, or WSGI callable, but it was a ndarray.
+2023-01-28 19:10:56,566 : INFO : 127.0.0.1 - - [28/Jan/2023 19:10:56] "[35m[1mPOST /batch HTTP/1.1[0m" 500 -
+2023-01-28 19:11:29,620 : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2023-01-28 19:11:29,620 : INFO : [33mPress CTRL+C to quit[0m
+2023-01-28 19:11:31,664 : INFO : 127.0.0.1 - - [28/Jan/2023 19:11:31] "GET / HTTP/1.1" 200 -
+2023-01-28 19:11:31,908 : INFO : 127.0.0.1 - - [28/Jan/2023 19:11:31] "[36mGET /vendor/bootstrap/css/bootstrap.css HTTP/1.1[0m" 304 -
+2023-01-28 19:11:32,002 : INFO : 127.0.0.1 - - [28/Jan/2023 19:11:32] "[36mGET /vendor/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+2023-01-28 19:11:32,003 : INFO : 127.0.0.1 - - [28/Jan/2023 19:11:32] "[36mGET /vendor/foundation-icons/foundation-icons.css HTTP/1.1[0m" 304 -
+2023-01-28 19:11:32,005 : INFO : 127.0.0.1 - - [28/Jan/2023 19:11:32] "[36mGET /resources/css/custom-style.css HTTP/1.1[0m" 304 -
+2023-01-28 19:11:32,006 : INFO : 127.0.0.1 - - [28/Jan/2023 19:11:32] "[36mGET /vendor/jquery/jquery-3.3.1.min.js HTTP/1.1[0m" 304 -
+2023-01-28 19:11:32,007 : INFO : 127.0.0.1 - - [28/Jan/2023 19:11:32] "[36mGET /resources/js/http_resonse.js HTTP/1.1[0m" 304 -
+2023-01-28 19:11:32,325 : INFO : 127.0.0.1 - - [28/Jan/2023 19:11:32] "[36mGET /resources/images/bg.png HTTP/1.1[0m" 304 -
+2023-01-28 19:11:32,326 : INFO : 127.0.0.1 - - [28/Jan/2023 19:11:32] "[36mGET /resources/images/chat-bg.png HTTP/1.1[0m" 304 -
+2023-01-28 19:11:33,709 : INFO : 127.0.0.1 - - [28/Jan/2023 19:11:33] "POST /batch HTTP/1.1" 200 -
+2023-01-28 19:11:51,274 : INFO : 127.0.0.1 - - [28/Jan/2023 19:11:51] "POST /stream HTTP/1.1" 200 -
+2023-01-28 19:14:00,276 : INFO : 127.0.0.1 - - [28/Jan/2023 19:14:00] "GET / HTTP/1.1" 200 -
+2023-01-28 19:14:00,541 : INFO : 127.0.0.1 - - [28/Jan/2023 19:14:00] "[36mGET /vendor/bootstrap/css/bootstrap.css HTTP/1.1[0m" 304 -
+2023-01-28 19:14:00,621 : INFO : 127.0.0.1 - - [28/Jan/2023 19:14:00] "[36mGET /vendor/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+2023-01-28 19:14:00,622 : INFO : 127.0.0.1 - - [28/Jan/2023 19:14:00] "[36mGET /vendor/foundation-icons/foundation-icons.css HTTP/1.1[0m" 304 -
+2023-01-28 19:14:00,624 : INFO : 127.0.0.1 - - [28/Jan/2023 19:14:00] "[36mGET /resources/css/custom-style.css HTTP/1.1[0m" 304 -
+2023-01-28 19:14:00,625 : INFO : 127.0.0.1 - - [28/Jan/2023 19:14:00] "[36mGET /vendor/jquery/jquery-3.3.1.min.js HTTP/1.1[0m" 304 -
+2023-01-28 19:14:00,626 : INFO : 127.0.0.1 - - [28/Jan/2023 19:14:00] "[36mGET /resources/js/http_resonse.js HTTP/1.1[0m" 304 -
+2023-01-28 19:14:00,949 : INFO : 127.0.0.1 - - [28/Jan/2023 19:14:00] "[36mGET /vendor/foundation-icons/foundation-icons.woff HTTP/1.1[0m" 304 -
+2023-01-28 19:14:00,950 : INFO : 127.0.0.1 - - [28/Jan/2023 19:14:00] "[36mGET /resources/images/bg.png HTTP/1.1[0m" 304 -
+2023-01-28 19:14:00,982 : INFO : 127.0.0.1 - - [28/Jan/2023 19:14:00] "[36mGET /resources/images/chat-bg.png HTTP/1.1[0m" 304 -
+2023-01-28 19:14:02,656 : INFO : 127.0.0.1 - - [28/Jan/2023 19:14:02] "POST /batch HTTP/1.1" 200 -
+2023-01-28 19:14:35,725 : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2023-01-28 19:14:35,725 : INFO : [33mPress CTRL+C to quit[0m
+2023-01-28 19:14:37,207 : INFO : 127.0.0.1 - - [28/Jan/2023 19:14:37] "GET / HTTP/1.1" 200 -
+2023-01-28 19:14:37,462 : INFO : 127.0.0.1 - - [28/Jan/2023 19:14:37] "[36mGET /vendor/bootstrap/css/bootstrap.css HTTP/1.1[0m" 304 -
+2023-01-28 19:14:37,540 : INFO : 127.0.0.1 - - [28/Jan/2023 19:14:37] "[36mGET /vendor/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+2023-01-28 19:14:37,552 : INFO : 127.0.0.1 - - [28/Jan/2023 19:14:37] "[36mGET /vendor/foundation-icons/foundation-icons.css HTTP/1.1[0m" 304 -
+2023-01-28 19:14:37,562 : INFO : 127.0.0.1 - - [28/Jan/2023 19:14:37] "[36mGET /resources/css/custom-style.css HTTP/1.1[0m" 304 -
+2023-01-28 19:14:37,598 : INFO : 127.0.0.1 - - [28/Jan/2023 19:14:37] "[36mGET /vendor/jquery/jquery-3.3.1.min.js HTTP/1.1[0m" 304 -
+2023-01-28 19:14:37,612 : INFO : 127.0.0.1 - - [28/Jan/2023 19:14:37] "[36mGET /resources/js/http_resonse.js HTTP/1.1[0m" 304 -
+2023-01-28 19:14:37,940 : INFO : 127.0.0.1 - - [28/Jan/2023 19:14:37] "[36mGET /vendor/foundation-icons/foundation-icons.woff HTTP/1.1[0m" 304 -
+2023-01-28 19:14:37,942 : INFO : 127.0.0.1 - - [28/Jan/2023 19:14:37] "[36mGET /resources/images/bg.png HTTP/1.1[0m" 304 -
+2023-01-28 19:14:37,943 : INFO : 127.0.0.1 - - [28/Jan/2023 19:14:37] "[36mGET /resources/images/chat-bg.png HTTP/1.1[0m" 304 -
+2023-01-28 19:14:39,604 : INFO : 127.0.0.1 - - [28/Jan/2023 19:14:39] "POST /batch HTTP/1.1" 200 -
+2023-01-28 19:14:58,099 : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2023-01-28 19:14:58,099 : INFO : [33mPress CTRL+C to quit[0m
+2023-01-28 19:15:00,751 : INFO : 127.0.0.1 - - [28/Jan/2023 19:15:00] "GET / HTTP/1.1" 200 -
+2023-01-28 19:15:01,009 : INFO : 127.0.0.1 - - [28/Jan/2023 19:15:01] "[36mGET /vendor/bootstrap/css/bootstrap.css HTTP/1.1[0m" 304 -
+2023-01-28 19:15:01,085 : INFO : 127.0.0.1 - - [28/Jan/2023 19:15:01] "[36mGET /vendor/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+2023-01-28 19:15:01,087 : INFO : 127.0.0.1 - - [28/Jan/2023 19:15:01] "[36mGET /vendor/foundation-icons/foundation-icons.css HTTP/1.1[0m" 304 -
+2023-01-28 19:15:01,089 : INFO : 127.0.0.1 - - [28/Jan/2023 19:15:01] "[36mGET /resources/css/custom-style.css HTTP/1.1[0m" 304 -
+2023-01-28 19:15:01,090 : INFO : 127.0.0.1 - - [28/Jan/2023 19:15:01] "[36mGET /vendor/jquery/jquery-3.3.1.min.js HTTP/1.1[0m" 304 -
+2023-01-28 19:15:01,091 : INFO : 127.0.0.1 - - [28/Jan/2023 19:15:01] "[36mGET /resources/js/http_resonse.js HTTP/1.1[0m" 304 -
+2023-01-28 19:15:01,407 : INFO : 127.0.0.1 - - [28/Jan/2023 19:15:01] "[36mGET /resources/images/bg.png HTTP/1.1[0m" 304 -
+2023-01-28 19:15:01,409 : INFO : 127.0.0.1 - - [28/Jan/2023 19:15:01] "[36mGET /resources/images/chat-bg.png HTTP/1.1[0m" 304 -
+2023-01-28 19:15:04,129 : INFO : 127.0.0.1 - - [28/Jan/2023 19:15:04] "POST /batch HTTP/1.1" 200 -
+2023-01-28 19:16:06,371 : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2023-01-28 19:16:06,372 : INFO : [33mPress CTRL+C to quit[0m
+2023-01-28 19:16:11,676 : INFO : 127.0.0.1 - - [28/Jan/2023 19:16:11] "GET / HTTP/1.1" 200 -
+2023-01-28 19:16:11,920 : INFO : 127.0.0.1 - - [28/Jan/2023 19:16:11] "[36mGET /vendor/bootstrap/css/bootstrap.css HTTP/1.1[0m" 304 -
+2023-01-28 19:16:12,000 : INFO : 127.0.0.1 - - [28/Jan/2023 19:16:12] "[36mGET /vendor/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+2023-01-28 19:16:12,001 : INFO : 127.0.0.1 - - [28/Jan/2023 19:16:12] "[36mGET /vendor/foundation-icons/foundation-icons.css HTTP/1.1[0m" 304 -
+2023-01-28 19:16:12,003 : INFO : 127.0.0.1 - - [28/Jan/2023 19:16:12] "[36mGET /resources/css/custom-style.css HTTP/1.1[0m" 304 -
+2023-01-28 19:16:12,004 : INFO : 127.0.0.1 - - [28/Jan/2023 19:16:12] "[36mGET /vendor/jquery/jquery-3.3.1.min.js HTTP/1.1[0m" 304 -
+2023-01-28 19:16:12,006 : INFO : 127.0.0.1 - - [28/Jan/2023 19:16:12] "[36mGET /resources/js/http_resonse.js HTTP/1.1[0m" 304 -
+2023-01-28 19:16:12,322 : INFO : 127.0.0.1 - - [28/Jan/2023 19:16:12] "[36mGET /resources/images/bg.png HTTP/1.1[0m" 304 -
+2023-01-28 19:16:12,324 : INFO : 127.0.0.1 - - [28/Jan/2023 19:16:12] "[36mGET /resources/images/chat-bg.png HTTP/1.1[0m" 304 -
+2023-01-28 19:16:13,776 : ERROR : Exception on /batch [POST]
+Traceback (most recent call last):
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File ".\app.py", line 79, in batch
+    string_list = ["{:.3f}".format(i) for i in pred_list]
+  File ".\app.py", line 79, in <listcomp>
+    string_list = ["{:.3f}".format(i) for i in pred_list]
+TypeError: unsupported format string passed to numpy.ndarray.__format__
+2023-01-28 19:16:13,788 : INFO : 127.0.0.1 - - [28/Jan/2023 19:16:13] "[35m[1mPOST /batch HTTP/1.1[0m" 500 -
+2023-01-28 19:17:34,782 : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2023-01-28 19:17:34,782 : INFO : [33mPress CTRL+C to quit[0m
+2023-01-28 19:17:36,722 : INFO : 127.0.0.1 - - [28/Jan/2023 19:17:36] "GET / HTTP/1.1" 200 -
+2023-01-28 19:17:36,983 : INFO : 127.0.0.1 - - [28/Jan/2023 19:17:36] "[36mGET /vendor/bootstrap/css/bootstrap.css HTTP/1.1[0m" 304 -
+2023-01-28 19:17:37,046 : INFO : 127.0.0.1 - - [28/Jan/2023 19:17:37] "[36mGET /vendor/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+2023-01-28 19:17:37,048 : INFO : 127.0.0.1 - - [28/Jan/2023 19:17:37] "[36mGET /vendor/foundation-icons/foundation-icons.css HTTP/1.1[0m" 304 -
+2023-01-28 19:17:37,049 : INFO : 127.0.0.1 - - [28/Jan/2023 19:17:37] "[36mGET /resources/css/custom-style.css HTTP/1.1[0m" 304 -
+2023-01-28 19:17:37,050 : INFO : 127.0.0.1 - - [28/Jan/2023 19:17:37] "[36mGET /vendor/jquery/jquery-3.3.1.min.js HTTP/1.1[0m" 304 -
+2023-01-28 19:17:37,052 : INFO : 127.0.0.1 - - [28/Jan/2023 19:17:37] "[36mGET /resources/js/http_resonse.js HTTP/1.1[0m" 304 -
+2023-01-28 19:17:37,372 : INFO : 127.0.0.1 - - [28/Jan/2023 19:17:37] "[36mGET /resources/images/bg.png HTTP/1.1[0m" 304 -
+2023-01-28 19:17:37,373 : INFO : 127.0.0.1 - - [28/Jan/2023 19:17:37] "[36mGET /resources/images/chat-bg.png HTTP/1.1[0m" 304 -
+2023-01-28 19:17:41,719 : INFO : 127.0.0.1 - - [28/Jan/2023 19:17:41] "POST /batch HTTP/1.1" 200 -
+2023-01-28 19:17:49,662 : INFO : 127.0.0.1 - - [28/Jan/2023 19:17:49] "POST /batch HTTP/1.1" 200 -
+2023-01-28 19:17:58,990 : INFO : 127.0.0.1 - - [28/Jan/2023 19:17:58] "POST /stream HTTP/1.1" 200 -
+2023-01-28 19:18:05,047 : INFO : 127.0.0.1 - - [28/Jan/2023 19:18:05] "POST /batch HTTP/1.1" 200 -
+2023-01-28 19:18:08,089 : INFO : 127.0.0.1 - - [28/Jan/2023 19:18:08] "GET / HTTP/1.1" 200 -
+2023-01-28 19:18:08,414 : INFO : 127.0.0.1 - - [28/Jan/2023 19:18:08] "[36mGET /vendor/bootstrap/css/bootstrap.css HTTP/1.1[0m" 304 -
+2023-01-28 19:18:08,416 : INFO : 127.0.0.1 - - [28/Jan/2023 19:18:08] "[36mGET /vendor/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+2023-01-28 19:18:08,418 : INFO : 127.0.0.1 - - [28/Jan/2023 19:18:08] "[36mGET /vendor/foundation-icons/foundation-icons.css HTTP/1.1[0m" 304 -
+2023-01-28 19:18:08,419 : INFO : 127.0.0.1 - - [28/Jan/2023 19:18:08] "[36mGET /resources/css/custom-style.css HTTP/1.1[0m" 304 -
+2023-01-28 19:18:08,421 : INFO : 127.0.0.1 - - [28/Jan/2023 19:18:08] "[36mGET /vendor/jquery/jquery-3.3.1.min.js HTTP/1.1[0m" 304 -
+2023-01-28 19:18:08,422 : INFO : 127.0.0.1 - - [28/Jan/2023 19:18:08] "[36mGET /resources/js/http_resonse.js HTTP/1.1[0m" 304 -
+2023-01-28 19:18:08,743 : INFO : 127.0.0.1 - - [28/Jan/2023 19:18:08] "[36mGET /resources/images/chat-bg.png HTTP/1.1[0m" 304 -
+2023-01-28 19:18:08,746 : INFO : 127.0.0.1 - - [28/Jan/2023 19:18:08] "[36mGET /resources/images/bg.png HTTP/1.1[0m" 304 -
+2023-01-28 19:19:02,101 : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2023-01-28 19:19:02,102 : INFO : [33mPress CTRL+C to quit[0m
+2023-01-28 19:19:04,411 : INFO : 127.0.0.1 - - [28/Jan/2023 19:19:04] "GET / HTTP/1.1" 200 -
+2023-01-28 19:19:04,674 : INFO : 127.0.0.1 - - [28/Jan/2023 19:19:04] "[36mGET /vendor/bootstrap/css/bootstrap.css HTTP/1.1[0m" 304 -
+2023-01-28 19:19:04,736 : INFO : 127.0.0.1 - - [28/Jan/2023 19:19:04] "[36mGET /vendor/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+2023-01-28 19:19:04,737 : INFO : 127.0.0.1 - - [28/Jan/2023 19:19:04] "[36mGET /vendor/foundation-icons/foundation-icons.css HTTP/1.1[0m" 304 -
+2023-01-28 19:19:04,739 : INFO : 127.0.0.1 - - [28/Jan/2023 19:19:04] "[36mGET /resources/css/custom-style.css HTTP/1.1[0m" 304 -
+2023-01-28 19:19:04,741 : INFO : 127.0.0.1 - - [28/Jan/2023 19:19:04] "[36mGET /vendor/jquery/jquery-3.3.1.min.js HTTP/1.1[0m" 304 -
+2023-01-28 19:19:04,742 : INFO : 127.0.0.1 - - [28/Jan/2023 19:19:04] "[36mGET /resources/js/http_resonse.js HTTP/1.1[0m" 304 -
+2023-01-28 19:19:05,059 : INFO : 127.0.0.1 - - [28/Jan/2023 19:19:05] "[36mGET /resources/images/bg.png HTTP/1.1[0m" 304 -
+2023-01-28 19:19:05,060 : INFO : 127.0.0.1 - - [28/Jan/2023 19:19:05] "[36mGET /resources/images/chat-bg.png HTTP/1.1[0m" 304 -
+2023-01-28 19:19:06,737 : INFO : 127.0.0.1 - - [28/Jan/2023 19:19:06] "POST /batch HTTP/1.1" 200 -
+2023-01-28 19:19:21,898 : INFO : 127.0.0.1 - - [28/Jan/2023 19:19:21] "POST /stream HTTP/1.1" 200 -
+2023-01-28 19:20:44,831 : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2023-01-28 19:20:44,831 : INFO : [33mPress CTRL+C to quit[0m
+2023-01-28 19:20:47,061 : INFO : 127.0.0.1 - - [28/Jan/2023 19:20:47] "GET / HTTP/1.1" 200 -
+2023-01-28 19:20:47,320 : INFO : 127.0.0.1 - - [28/Jan/2023 19:20:47] "[36mGET /vendor/bootstrap/css/bootstrap.css HTTP/1.1[0m" 304 -
+2023-01-28 19:20:47,384 : INFO : 127.0.0.1 - - [28/Jan/2023 19:20:47] "[36mGET /vendor/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+2023-01-28 19:20:47,386 : INFO : 127.0.0.1 - - [28/Jan/2023 19:20:47] "[36mGET /vendor/foundation-icons/foundation-icons.css HTTP/1.1[0m" 304 -
+2023-01-28 19:20:47,387 : INFO : 127.0.0.1 - - [28/Jan/2023 19:20:47] "[36mGET /resources/css/custom-style.css HTTP/1.1[0m" 304 -
+2023-01-28 19:20:47,388 : INFO : 127.0.0.1 - - [28/Jan/2023 19:20:47] "[36mGET /vendor/jquery/jquery-3.3.1.min.js HTTP/1.1[0m" 304 -
+2023-01-28 19:20:47,389 : INFO : 127.0.0.1 - - [28/Jan/2023 19:20:47] "[36mGET /resources/js/http_resonse.js HTTP/1.1[0m" 304 -
+2023-01-28 19:20:47,712 : INFO : 127.0.0.1 - - [28/Jan/2023 19:20:47] "[36mGET /resources/images/bg.png HTTP/1.1[0m" 304 -
+2023-01-28 19:20:47,713 : INFO : 127.0.0.1 - - [28/Jan/2023 19:20:47] "[36mGET /resources/images/chat-bg.png HTTP/1.1[0m" 304 -
+2023-01-28 19:20:50,032 : ERROR : Exception on /batch [POST]
+Traceback (most recent call last):
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File ".\app.py", line 72, in batch
+    string_list = ["{:.3f}".format(i) for i in pred_list]
+  File ".\app.py", line 72, in <listcomp>
+    string_list = ["{:.3f}".format(i) for i in pred_list]
+TypeError: unsupported format string passed to numpy.ndarray.__format__
+2023-01-28 19:20:50,034 : INFO : 127.0.0.1 - - [28/Jan/2023 19:20:50] "[35m[1mPOST /batch HTTP/1.1[0m" 500 -
+2023-01-28 19:24:26,179 : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2023-01-28 19:24:26,179 : INFO : [33mPress CTRL+C to quit[0m
+2023-01-28 19:24:27,876 : INFO : 127.0.0.1 - - [28/Jan/2023 19:24:27] "GET / HTTP/1.1" 200 -
+2023-01-28 19:24:28,139 : INFO : 127.0.0.1 - - [28/Jan/2023 19:24:28] "[36mGET /vendor/bootstrap/css/bootstrap.css HTTP/1.1[0m" 304 -
+2023-01-28 19:24:28,200 : INFO : 127.0.0.1 - - [28/Jan/2023 19:24:28] "[36mGET /vendor/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+2023-01-28 19:24:28,201 : INFO : 127.0.0.1 - - [28/Jan/2023 19:24:28] "[36mGET /vendor/foundation-icons/foundation-icons.css HTTP/1.1[0m" 304 -
+2023-01-28 19:24:28,204 : INFO : 127.0.0.1 - - [28/Jan/2023 19:24:28] "[36mGET /resources/css/custom-style.css HTTP/1.1[0m" 304 -
+2023-01-28 19:24:28,206 : INFO : 127.0.0.1 - - [28/Jan/2023 19:24:28] "[36mGET /vendor/jquery/jquery-3.3.1.min.js HTTP/1.1[0m" 304 -
+2023-01-28 19:24:28,207 : INFO : 127.0.0.1 - - [28/Jan/2023 19:24:28] "[36mGET /resources/js/http_resonse.js HTTP/1.1[0m" 304 -
+2023-01-28 19:24:28,528 : INFO : 127.0.0.1 - - [28/Jan/2023 19:24:28] "[36mGET /vendor/foundation-icons/foundation-icons.woff HTTP/1.1[0m" 304 -
+2023-01-28 19:24:28,530 : INFO : 127.0.0.1 - - [28/Jan/2023 19:24:28] "[36mGET /resources/images/bg.png HTTP/1.1[0m" 304 -
+2023-01-28 19:24:28,532 : INFO : 127.0.0.1 - - [28/Jan/2023 19:24:28] "[36mGET /resources/images/chat-bg.png HTTP/1.1[0m" 304 -
+2023-01-28 19:24:31,856 : INFO : 127.0.0.1 - - [28/Jan/2023 19:24:31] "POST /batch HTTP/1.1" 200 -
+2023-01-28 19:24:38,454 : INFO : 127.0.0.1 - - [28/Jan/2023 19:24:38] "POST /batch HTTP/1.1" 200 -
+2023-01-28 19:27:46,687 : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2023-01-28 19:27:46,688 : INFO : [33mPress CTRL+C to quit[0m
+2023-01-28 19:27:49,936 : INFO : 127.0.0.1 - - [28/Jan/2023 19:27:49] "GET / HTTP/1.1" 200 -
+2023-01-28 19:27:50,198 : INFO : 127.0.0.1 - - [28/Jan/2023 19:27:50] "[36mGET /vendor/bootstrap/css/bootstrap.css HTTP/1.1[0m" 304 -
+2023-01-28 19:27:50,259 : INFO : 127.0.0.1 - - [28/Jan/2023 19:27:50] "[36mGET /vendor/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+2023-01-28 19:27:50,261 : INFO : 127.0.0.1 - - [28/Jan/2023 19:27:50] "[36mGET /vendor/foundation-icons/foundation-icons.css HTTP/1.1[0m" 304 -
+2023-01-28 19:27:50,263 : INFO : 127.0.0.1 - - [28/Jan/2023 19:27:50] "[36mGET /resources/css/custom-style.css HTTP/1.1[0m" 304 -
+2023-01-28 19:27:50,264 : INFO : 127.0.0.1 - - [28/Jan/2023 19:27:50] "[36mGET /vendor/jquery/jquery-3.3.1.min.js HTTP/1.1[0m" 304 -
+2023-01-28 19:27:50,266 : INFO : 127.0.0.1 - - [28/Jan/2023 19:27:50] "[36mGET /resources/js/http_resonse.js HTTP/1.1[0m" 304 -
+2023-01-28 19:27:50,588 : INFO : 127.0.0.1 - - [28/Jan/2023 19:27:50] "[36mGET /vendor/foundation-icons/foundation-icons.woff HTTP/1.1[0m" 304 -
+2023-01-28 19:27:50,589 : INFO : 127.0.0.1 - - [28/Jan/2023 19:27:50] "[36mGET /resources/images/bg.png HTTP/1.1[0m" 304 -
+2023-01-28 19:27:50,590 : INFO : 127.0.0.1 - - [28/Jan/2023 19:27:50] "[36mGET /resources/images/chat-bg.png HTTP/1.1[0m" 304 -
+2023-01-28 19:27:52,319 : INFO : 127.0.0.1 - - [28/Jan/2023 19:27:52] "POST /batch HTTP/1.1" 200 -
+2023-01-28 19:31:49,873 : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2023-01-28 19:31:49,873 : INFO : [33mPress CTRL+C to quit[0m
+2023-01-28 19:31:52,703 : INFO : 127.0.0.1 - - [28/Jan/2023 19:31:52] "GET / HTTP/1.1" 200 -
+2023-01-28 19:31:52,950 : INFO : 127.0.0.1 - - [28/Jan/2023 19:31:52] "[36mGET /vendor/bootstrap/css/bootstrap.css HTTP/1.1[0m" 304 -
+2023-01-28 19:31:53,028 : INFO : 127.0.0.1 - - [28/Jan/2023 19:31:53] "[36mGET /vendor/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+2023-01-28 19:31:53,038 : INFO : 127.0.0.1 - - [28/Jan/2023 19:31:53] "[36mGET /vendor/foundation-icons/foundation-icons.css HTTP/1.1[0m" 304 -
+2023-01-28 19:31:53,044 : INFO : 127.0.0.1 - - [28/Jan/2023 19:31:53] "[36mGET /resources/css/custom-style.css HTTP/1.1[0m" 304 -
+2023-01-28 19:31:53,080 : INFO : 127.0.0.1 - - [28/Jan/2023 19:31:53] "[36mGET /vendor/jquery/jquery-3.3.1.min.js HTTP/1.1[0m" 304 -
+2023-01-28 19:31:53,093 : INFO : 127.0.0.1 - - [28/Jan/2023 19:31:53] "[36mGET /resources/js/http_resonse.js HTTP/1.1[0m" 304 -
+2023-01-28 19:31:53,426 : INFO : 127.0.0.1 - - [28/Jan/2023 19:31:53] "[36mGET /vendor/foundation-icons/foundation-icons.woff HTTP/1.1[0m" 304 -
+2023-01-28 19:31:53,428 : INFO : 127.0.0.1 - - [28/Jan/2023 19:31:53] "[36mGET /resources/images/bg.png HTTP/1.1[0m" 304 -
+2023-01-28 19:31:53,430 : INFO : 127.0.0.1 - - [28/Jan/2023 19:31:53] "[36mGET /resources/images/chat-bg.png HTTP/1.1[0m" 304 -
+2023-01-28 19:31:55,314 : ERROR : Exception on /batch [POST]
+Traceback (most recent call last):
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1842, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 2153, in make_response
+    rv = self.json.response(rv)
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\json\provider.py", line 309, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=mimetype
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\json\provider.py", line 230, in dumps
+    return json.dumps(obj, **kwargs)
+  File "C:\ProgramData\Anaconda3\lib\json\__init__.py", line 234, in dumps
+    return cls(
+  File "C:\ProgramData\Anaconda3\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\ProgramData\Anaconda3\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\json\provider.py", line 122, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type ndarray is not JSON serializable
+2023-01-28 19:31:55,342 : INFO : 127.0.0.1 - - [28/Jan/2023 19:31:55] "[35m[1mPOST /batch HTTP/1.1[0m" 500 -
+2023-01-28 19:32:41,513 : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2023-01-28 19:32:41,513 : INFO : [33mPress CTRL+C to quit[0m
+2023-01-28 19:32:41,986 : INFO : 127.0.0.1 - - [28/Jan/2023 19:32:41] "GET / HTTP/1.1" 200 -
+2023-01-28 19:32:42,232 : INFO : 127.0.0.1 - - [28/Jan/2023 19:32:42] "[36mGET /vendor/bootstrap/css/bootstrap.css HTTP/1.1[0m" 304 -
+2023-01-28 19:32:42,312 : INFO : 127.0.0.1 - - [28/Jan/2023 19:32:42] "[36mGET /vendor/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+2023-01-28 19:32:42,313 : INFO : 127.0.0.1 - - [28/Jan/2023 19:32:42] "[36mGET /vendor/foundation-icons/foundation-icons.css HTTP/1.1[0m" 304 -
+2023-01-28 19:32:42,315 : INFO : 127.0.0.1 - - [28/Jan/2023 19:32:42] "[36mGET /resources/css/custom-style.css HTTP/1.1[0m" 304 -
+2023-01-28 19:32:42,316 : INFO : 127.0.0.1 - - [28/Jan/2023 19:32:42] "[36mGET /vendor/jquery/jquery-3.3.1.min.js HTTP/1.1[0m" 304 -
+2023-01-28 19:32:42,318 : INFO : 127.0.0.1 - - [28/Jan/2023 19:32:42] "[36mGET /resources/js/http_resonse.js HTTP/1.1[0m" 304 -
+2023-01-28 19:32:42,656 : INFO : 127.0.0.1 - - [28/Jan/2023 19:32:42] "[36mGET /vendor/foundation-icons/foundation-icons.woff HTTP/1.1[0m" 304 -
+2023-01-28 19:32:42,657 : INFO : 127.0.0.1 - - [28/Jan/2023 19:32:42] "[36mGET /resources/images/chat-bg.png HTTP/1.1[0m" 304 -
+2023-01-28 19:32:42,659 : INFO : 127.0.0.1 - - [28/Jan/2023 19:32:42] "[36mGET /resources/images/bg.png HTTP/1.1[0m" 304 -
+2023-01-28 19:32:45,228 : ERROR : Exception on /batch [POST]
+Traceback (most recent call last):
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File ".\app.py", line 71, in batch
+    string_list.append('Pred ',i)
+TypeError: append() takes exactly one argument (2 given)
+2023-01-28 19:32:45,230 : INFO : 127.0.0.1 - - [28/Jan/2023 19:32:45] "[35m[1mPOST /batch HTTP/1.1[0m" 500 -
+2023-01-28 19:34:19,739 : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2023-01-28 19:34:19,739 : INFO : [33mPress CTRL+C to quit[0m
+2023-01-28 19:34:22,682 : INFO : 127.0.0.1 - - [28/Jan/2023 19:34:22] "GET / HTTP/1.1" 200 -
+2023-01-28 19:34:22,944 : INFO : 127.0.0.1 - - [28/Jan/2023 19:34:22] "[36mGET /vendor/bootstrap/css/bootstrap.css HTTP/1.1[0m" 304 -
+2023-01-28 19:34:23,007 : INFO : 127.0.0.1 - - [28/Jan/2023 19:34:23] "[36mGET /vendor/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+2023-01-28 19:34:23,010 : INFO : 127.0.0.1 - - [28/Jan/2023 19:34:23] "[36mGET /vendor/foundation-icons/foundation-icons.css HTTP/1.1[0m" 304 -
+2023-01-28 19:34:23,011 : INFO : 127.0.0.1 - - [28/Jan/2023 19:34:23] "[36mGET /resources/css/custom-style.css HTTP/1.1[0m" 304 -
+2023-01-28 19:34:23,013 : INFO : 127.0.0.1 - - [28/Jan/2023 19:34:23] "[36mGET /vendor/jquery/jquery-3.3.1.min.js HTTP/1.1[0m" 304 -
+2023-01-28 19:34:23,015 : INFO : 127.0.0.1 - - [28/Jan/2023 19:34:23] "[36mGET /resources/js/http_resonse.js HTTP/1.1[0m" 304 -
+2023-01-28 19:34:23,344 : INFO : 127.0.0.1 - - [28/Jan/2023 19:34:23] "[36mGET /vendor/foundation-icons/foundation-icons.woff HTTP/1.1[0m" 304 -
+2023-01-28 19:34:23,345 : INFO : 127.0.0.1 - - [28/Jan/2023 19:34:23] "[36mGET /resources/images/bg.png HTTP/1.1[0m" 304 -
+2023-01-28 19:34:23,347 : INFO : 127.0.0.1 - - [28/Jan/2023 19:34:23] "[36mGET /resources/images/chat-bg.png HTTP/1.1[0m" 304 -
+2023-01-28 19:34:24,808 : ERROR : Exception on /stream [POST]
+Traceback (most recent call last):
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File ".\app.py", line 43, in stream
+    X = int(X_input)
+ValueError: invalid literal for int() with base 10: '12.3'
+2023-01-28 19:34:24,811 : INFO : 127.0.0.1 - - [28/Jan/2023 19:34:24] "[35m[1mPOST /stream HTTP/1.1[0m" 500 -
+2023-01-28 19:34:27,820 : INFO : 127.0.0.1 - - [28/Jan/2023 19:34:27] "POST /batch HTTP/1.1" 200 -
+2023-01-28 19:34:55,339 : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2023-01-28 19:34:55,339 : INFO : [33mPress CTRL+C to quit[0m
+2023-01-28 19:34:56,088 : INFO : 127.0.0.1 - - [28/Jan/2023 19:34:56] "GET / HTTP/1.1" 200 -
+2023-01-28 19:34:56,352 : INFO : 127.0.0.1 - - [28/Jan/2023 19:34:56] "[36mGET /vendor/bootstrap/css/bootstrap.css HTTP/1.1[0m" 304 -
+2023-01-28 19:34:56,414 : INFO : 127.0.0.1 - - [28/Jan/2023 19:34:56] "[36mGET /vendor/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+2023-01-28 19:34:56,416 : INFO : 127.0.0.1 - - [28/Jan/2023 19:34:56] "[36mGET /vendor/foundation-icons/foundation-icons.css HTTP/1.1[0m" 304 -
+2023-01-28 19:34:56,418 : INFO : 127.0.0.1 - - [28/Jan/2023 19:34:56] "[36mGET /resources/css/custom-style.css HTTP/1.1[0m" 304 -
+2023-01-28 19:34:56,419 : INFO : 127.0.0.1 - - [28/Jan/2023 19:34:56] "[36mGET /vendor/jquery/jquery-3.3.1.min.js HTTP/1.1[0m" 304 -
+2023-01-28 19:34:56,421 : INFO : 127.0.0.1 - - [28/Jan/2023 19:34:56] "[36mGET /resources/js/http_resonse.js HTTP/1.1[0m" 304 -
+2023-01-28 19:34:56,739 : INFO : 127.0.0.1 - - [28/Jan/2023 19:34:56] "[36mGET /vendor/foundation-icons/foundation-icons.woff HTTP/1.1[0m" 304 -
+2023-01-28 19:34:56,740 : INFO : 127.0.0.1 - - [28/Jan/2023 19:34:56] "[36mGET /resources/images/bg.png HTTP/1.1[0m" 304 -
+2023-01-28 19:34:56,742 : INFO : 127.0.0.1 - - [28/Jan/2023 19:34:56] "[36mGET /resources/images/chat-bg.png HTTP/1.1[0m" 304 -
+2023-01-28 19:35:00,480 : INFO : 127.0.0.1 - - [28/Jan/2023 19:35:00] "POST /batch HTTP/1.1" 200 -
+2023-01-28 19:37:12,503 : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2023-01-28 19:37:12,504 : INFO : [33mPress CTRL+C to quit[0m
+2023-01-28 19:37:15,513 : INFO : 127.0.0.1 - - [28/Jan/2023 19:37:15] "GET / HTTP/1.1" 200 -
+2023-01-28 19:37:15,776 : INFO : 127.0.0.1 - - [28/Jan/2023 19:37:15] "[36mGET /vendor/bootstrap/css/bootstrap.css HTTP/1.1[0m" 304 -
+2023-01-28 19:37:15,837 : INFO : 127.0.0.1 - - [28/Jan/2023 19:37:15] "[36mGET /vendor/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+2023-01-28 19:37:15,839 : INFO : 127.0.0.1 - - [28/Jan/2023 19:37:15] "[36mGET /vendor/foundation-icons/foundation-icons.css HTTP/1.1[0m" 304 -
+2023-01-28 19:37:15,840 : INFO : 127.0.0.1 - - [28/Jan/2023 19:37:15] "[36mGET /resources/css/custom-style.css HTTP/1.1[0m" 304 -
+2023-01-28 19:37:15,841 : INFO : 127.0.0.1 - - [28/Jan/2023 19:37:15] "[36mGET /vendor/jquery/jquery-3.3.1.min.js HTTP/1.1[0m" 304 -
+2023-01-28 19:37:15,842 : INFO : 127.0.0.1 - - [28/Jan/2023 19:37:15] "[36mGET /resources/js/http_resonse.js HTTP/1.1[0m" 304 -
+2023-01-28 19:37:16,161 : INFO : 127.0.0.1 - - [28/Jan/2023 19:37:16] "[36mGET /vendor/foundation-icons/foundation-icons.woff HTTP/1.1[0m" 304 -
+2023-01-28 19:37:16,163 : INFO : 127.0.0.1 - - [28/Jan/2023 19:37:16] "[36mGET /resources/images/bg.png HTTP/1.1[0m" 304 -
+2023-01-28 19:37:16,164 : INFO : 127.0.0.1 - - [28/Jan/2023 19:37:16] "[36mGET /resources/images/chat-bg.png HTTP/1.1[0m" 304 -
+2023-01-28 19:37:17,746 : INFO : 127.0.0.1 - - [28/Jan/2023 19:37:17] "POST /stream HTTP/1.1" 200 -
+2023-01-28 19:37:24,536 : INFO : 127.0.0.1 - - [28/Jan/2023 19:37:24] "POST /batch HTTP/1.1" 200 -
+2023-01-28 19:38:23,869 : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2023-01-28 19:38:23,869 : INFO : [33mPress CTRL+C to quit[0m
+2023-01-28 19:38:27,843 : INFO : 127.0.0.1 - - [28/Jan/2023 19:38:27] "GET / HTTP/1.1" 200 -
+2023-01-28 19:38:28,088 : INFO : 127.0.0.1 - - [28/Jan/2023 19:38:28] "[36mGET /vendor/bootstrap/css/bootstrap.css HTTP/1.1[0m" 304 -
+2023-01-28 19:38:28,167 : INFO : 127.0.0.1 - - [28/Jan/2023 19:38:28] "[36mGET /vendor/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+2023-01-28 19:38:28,168 : INFO : 127.0.0.1 - - [28/Jan/2023 19:38:28] "[36mGET /vendor/foundation-icons/foundation-icons.css HTTP/1.1[0m" 304 -
+2023-01-28 19:38:28,169 : INFO : 127.0.0.1 - - [28/Jan/2023 19:38:28] "[36mGET /resources/css/custom-style.css HTTP/1.1[0m" 304 -
+2023-01-28 19:38:28,170 : INFO : 127.0.0.1 - - [28/Jan/2023 19:38:28] "[36mGET /vendor/jquery/jquery-3.3.1.min.js HTTP/1.1[0m" 304 -
+2023-01-28 19:38:28,171 : INFO : 127.0.0.1 - - [28/Jan/2023 19:38:28] "[36mGET /resources/js/http_resonse.js HTTP/1.1[0m" 304 -
+2023-01-28 19:38:28,503 : INFO : 127.0.0.1 - - [28/Jan/2023 19:38:28] "[36mGET /vendor/foundation-icons/foundation-icons.woff HTTP/1.1[0m" 304 -
+2023-01-28 19:38:28,505 : INFO : 127.0.0.1 - - [28/Jan/2023 19:38:28] "[36mGET /resources/images/bg.png HTTP/1.1[0m" 304 -
+2023-01-28 19:38:28,506 : INFO : 127.0.0.1 - - [28/Jan/2023 19:38:28] "[36mGET /resources/images/chat-bg.png HTTP/1.1[0m" 304 -
+2023-01-28 19:38:31,305 : INFO : 127.0.0.1 - - [28/Jan/2023 19:38:31] "POST /batch HTTP/1.1" 200 -
+2023-01-28 19:38:37,227 : ERROR : Exception on /stream [POST]
+Traceback (most recent call last):
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File ".\app.py", line 43, in stream
+    X = int(X_input)
+ValueError: invalid literal for int() with base 10: '12 2 '
+2023-01-28 19:38:37,231 : INFO : 127.0.0.1 - - [28/Jan/2023 19:38:37] "[35m[1mPOST /stream HTTP/1.1[0m" 500 -
+2023-01-28 19:39:56,051 : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2023-01-28 19:39:56,051 : INFO : [33mPress CTRL+C to quit[0m
+2023-01-28 19:39:57,515 : INFO : 127.0.0.1 - - [28/Jan/2023 19:39:57] "GET / HTTP/1.1" 200 -
+2023-01-28 19:39:57,762 : INFO : 127.0.0.1 - - [28/Jan/2023 19:39:57] "[36mGET /vendor/bootstrap/css/bootstrap.css HTTP/1.1[0m" 304 -
+2023-01-28 19:39:57,840 : INFO : 127.0.0.1 - - [28/Jan/2023 19:39:57] "[36mGET /vendor/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+2023-01-28 19:39:57,841 : INFO : 127.0.0.1 - - [28/Jan/2023 19:39:57] "[36mGET /vendor/foundation-icons/foundation-icons.css HTTP/1.1[0m" 304 -
+2023-01-28 19:39:57,844 : INFO : 127.0.0.1 - - [28/Jan/2023 19:39:57] "[36mGET /resources/css/custom-style.css HTTP/1.1[0m" 304 -
+2023-01-28 19:39:57,844 : INFO : 127.0.0.1 - - [28/Jan/2023 19:39:57] "[36mGET /vendor/jquery/jquery-3.3.1.min.js HTTP/1.1[0m" 304 -
+2023-01-28 19:39:57,846 : INFO : 127.0.0.1 - - [28/Jan/2023 19:39:57] "[36mGET /resources/js/http_resonse.js HTTP/1.1[0m" 304 -
+2023-01-28 19:39:58,180 : INFO : 127.0.0.1 - - [28/Jan/2023 19:39:58] "[36mGET /vendor/foundation-icons/foundation-icons.woff HTTP/1.1[0m" 304 -
+2023-01-28 19:39:58,181 : INFO : 127.0.0.1 - - [28/Jan/2023 19:39:58] "[36mGET /resources/images/bg.png HTTP/1.1[0m" 304 -
+2023-01-28 19:39:58,183 : INFO : 127.0.0.1 - - [28/Jan/2023 19:39:58] "[36mGET /resources/images/chat-bg.png HTTP/1.1[0m" 304 -
+2023-01-28 19:40:00,912 : INFO : 127.0.0.1 - - [28/Jan/2023 19:40:00] "POST /batch HTTP/1.1" 200 -
+2023-01-28 19:45:38,000 : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2023-01-28 19:45:38,000 : INFO : [33mPress CTRL+C to quit[0m
+2023-01-28 19:45:44,381 : INFO : 127.0.0.1 - - [28/Jan/2023 19:45:44] "GET / HTTP/1.1" 200 -
+2023-01-28 19:45:44,623 : INFO : 127.0.0.1 - - [28/Jan/2023 19:45:44] "[36mGET /vendor/bootstrap/css/bootstrap.css HTTP/1.1[0m" 304 -
+2023-01-28 19:45:44,718 : INFO : 127.0.0.1 - - [28/Jan/2023 19:45:44] "[36mGET /vendor/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+2023-01-28 19:45:44,728 : INFO : 127.0.0.1 - - [28/Jan/2023 19:45:44] "[36mGET /vendor/foundation-icons/foundation-icons.css HTTP/1.1[0m" 304 -
+2023-01-28 19:45:44,735 : INFO : 127.0.0.1 - - [28/Jan/2023 19:45:44] "[36mGET /resources/css/custom-style.css HTTP/1.1[0m" 304 -
+2023-01-28 19:45:44,764 : INFO : 127.0.0.1 - - [28/Jan/2023 19:45:44] "[36mGET /vendor/jquery/jquery-3.3.1.min.js HTTP/1.1[0m" 304 -
+2023-01-28 19:45:44,777 : INFO : 127.0.0.1 - - [28/Jan/2023 19:45:44] "[36mGET /resources/js/http_resonse.js HTTP/1.1[0m" 304 -
+2023-01-28 19:45:45,104 : INFO : 127.0.0.1 - - [28/Jan/2023 19:45:45] "[36mGET /vendor/foundation-icons/foundation-icons.woff HTTP/1.1[0m" 304 -
+2023-01-28 19:45:45,107 : INFO : 127.0.0.1 - - [28/Jan/2023 19:45:45] "[36mGET /resources/images/bg.png HTTP/1.1[0m" 304 -
+2023-01-28 19:45:45,109 : INFO : 127.0.0.1 - - [28/Jan/2023 19:45:45] "[36mGET /resources/images/chat-bg.png HTTP/1.1[0m" 304 -
+2023-01-28 19:45:46,787 : ERROR : Exception on /batch [POST]
+Traceback (most recent call last):
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\MohammadNuruzzaman\AppData\Roaming\Python\Python38\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File ".\app.py", line 67, in batch
+    string_list = ["Prediction of {} is {:.3f}\n".format(i[0]) for i in pred_list]
+  File ".\app.py", line 67, in <listcomp>
+    string_list = ["Prediction of {} is {:.3f}\n".format(i[0]) for i in pred_list]
+IndexError: Replacement index 1 out of range for positional args tuple
+2023-01-28 19:45:46,805 : INFO : 127.0.0.1 - - [28/Jan/2023 19:45:46] "[35m[1mPOST /batch HTTP/1.1[0m" 500 -
+2023-01-28 19:48:08,720 : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2023-01-28 19:48:08,720 : INFO : [33mPress CTRL+C to quit[0m
+2023-01-28 19:48:10,690 : INFO : 127.0.0.1 - - [28/Jan/2023 19:48:10] "GET / HTTP/1.1" 200 -
+2023-01-28 19:48:10,951 : INFO : 127.0.0.1 - - [28/Jan/2023 19:48:10] "[36mGET /vendor/bootstrap/css/bootstrap.css HTTP/1.1[0m" 304 -
+2023-01-28 19:48:11,016 : INFO : 127.0.0.1 - - [28/Jan/2023 19:48:11] "[36mGET /vendor/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+2023-01-28 19:48:11,017 : INFO : 127.0.0.1 - - [28/Jan/2023 19:48:11] "[36mGET /vendor/foundation-icons/foundation-icons.css HTTP/1.1[0m" 304 -
+2023-01-28 19:48:11,019 : INFO : 127.0.0.1 - - [28/Jan/2023 19:48:11] "[36mGET /resources/css/custom-style.css HTTP/1.1[0m" 304 -
+2023-01-28 19:48:11,021 : INFO : 127.0.0.1 - - [28/Jan/2023 19:48:11] "[36mGET /resources/js/http_resonse.js HTTP/1.1[0m" 304 -
+2023-01-28 19:48:11,022 : INFO : 127.0.0.1 - - [28/Jan/2023 19:48:11] "[36mGET /vendor/jquery/jquery-3.3.1.min.js HTTP/1.1[0m" 304 -
+2023-01-28 19:48:11,340 : INFO : 127.0.0.1 - - [28/Jan/2023 19:48:11] "[36mGET /vendor/foundation-icons/foundation-icons.woff HTTP/1.1[0m" 304 -
+2023-01-28 19:48:11,341 : INFO : 127.0.0.1 - - [28/Jan/2023 19:48:11] "[36mGET /resources/images/bg.png HTTP/1.1[0m" 304 -
+2023-01-28 19:48:11,343 : INFO : 127.0.0.1 - - [28/Jan/2023 19:48:11] "[36mGET /resources/images/chat-bg.png HTTP/1.1[0m" 304 -
+2023-01-28 19:48:15,474 : INFO : 127.0.0.1 - - [28/Jan/2023 19:48:15] "POST /batch HTTP/1.1" 200 -
+2023-01-28 19:48:56,578 : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2023-01-28 19:48:56,578 : INFO : [33mPress CTRL+C to quit[0m
+2023-01-28 19:49:00,291 : INFO : 127.0.0.1 - - [28/Jan/2023 19:49:00] "GET / HTTP/1.1" 200 -
+2023-01-28 19:49:00,537 : INFO : 127.0.0.1 - - [28/Jan/2023 19:49:00] "[36mGET /vendor/bootstrap/css/bootstrap.css HTTP/1.1[0m" 304 -
+2023-01-28 19:49:00,615 : INFO : 127.0.0.1 - - [28/Jan/2023 19:49:00] "[36mGET /vendor/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+2023-01-28 19:49:00,617 : INFO : 127.0.0.1 - - [28/Jan/2023 19:49:00] "[36mGET /vendor/foundation-icons/foundation-icons.css HTTP/1.1[0m" 304 -
+2023-01-28 19:49:00,618 : INFO : 127.0.0.1 - - [28/Jan/2023 19:49:00] "[36mGET /resources/css/custom-style.css HTTP/1.1[0m" 304 -
+2023-01-28 19:49:00,620 : INFO : 127.0.0.1 - - [28/Jan/2023 19:49:00] "[36mGET /vendor/jquery/jquery-3.3.1.min.js HTTP/1.1[0m" 304 -
+2023-01-28 19:49:00,621 : INFO : 127.0.0.1 - - [28/Jan/2023 19:49:00] "[36mGET /resources/js/http_resonse.js HTTP/1.1[0m" 304 -
+2023-01-28 19:49:00,943 : INFO : 127.0.0.1 - - [28/Jan/2023 19:49:00] "[36mGET /vendor/foundation-icons/foundation-icons.woff HTTP/1.1[0m" 304 -
+2023-01-28 19:49:00,945 : INFO : 127.0.0.1 - - [28/Jan/2023 19:49:00] "[36mGET /resources/images/bg.png HTTP/1.1[0m" 304 -
+2023-01-28 19:49:00,947 : INFO : 127.0.0.1 - - [28/Jan/2023 19:49:00] "[36mGET /resources/images/chat-bg.png HTTP/1.1[0m" 304 -
+2023-01-28 19:49:03,360 : INFO : 127.0.0.1 - - [28/Jan/2023 19:49:03] "POST /batch HTTP/1.1" 200 -
+2023-01-28 19:53:40,815 : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2023-01-28 19:53:40,815 : INFO : [33mPress CTRL+C to quit[0m
+2023-01-28 19:53:41,675 : INFO : 127.0.0.1 - - [28/Jan/2023 19:53:41] "GET / HTTP/1.1" 200 -
+2023-01-28 19:53:41,919 : INFO : 127.0.0.1 - - [28/Jan/2023 19:53:41] "[36mGET /vendor/bootstrap/css/bootstrap.css HTTP/1.1[0m" 304 -
+2023-01-28 19:53:41,998 : INFO : 127.0.0.1 - - [28/Jan/2023 19:53:41] "[36mGET /vendor/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+2023-01-28 19:53:41,999 : INFO : 127.0.0.1 - - [28/Jan/2023 19:53:41] "[36mGET /vendor/foundation-icons/foundation-icons.css HTTP/1.1[0m" 304 -
+2023-01-28 19:53:42,001 : INFO : 127.0.0.1 - - [28/Jan/2023 19:53:42] "[36mGET /resources/css/custom-style.css HTTP/1.1[0m" 304 -
+2023-01-28 19:53:42,002 : INFO : 127.0.0.1 - - [28/Jan/2023 19:53:42] "[36mGET /vendor/jquery/jquery-3.3.1.min.js HTTP/1.1[0m" 304 -
+2023-01-28 19:53:42,003 : INFO : 127.0.0.1 - - [28/Jan/2023 19:53:42] "[36mGET /resources/js/http_resonse.js HTTP/1.1[0m" 304 -
+2023-01-28 19:53:42,333 : INFO : 127.0.0.1 - - [28/Jan/2023 19:53:42] "[36mGET /vendor/foundation-icons/foundation-icons.woff HTTP/1.1[0m" 304 -
+2023-01-28 19:53:42,335 : INFO : 127.0.0.1 - - [28/Jan/2023 19:53:42] "[36mGET /resources/images/bg.png HTTP/1.1[0m" 304 -
+2023-01-28 19:53:42,337 : INFO : 127.0.0.1 - - [28/Jan/2023 19:53:42] "[36mGET /resources/images/chat-bg.png HTTP/1.1[0m" 304 -
+2023-01-28 19:53:44,143 : INFO : 127.0.0.1 - - [28/Jan/2023 19:53:44] "POST /batch HTTP/1.1" 200 -
+2023-01-28 19:55:06,306 : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2023-01-28 19:55:06,307 : INFO : [33mPress CTRL+C to quit[0m
+2023-01-28 19:55:10,217 : INFO : 127.0.0.1 - - [28/Jan/2023 19:55:10] "GET / HTTP/1.1" 200 -
+2023-01-28 19:55:10,465 : INFO : 127.0.0.1 - - [28/Jan/2023 19:55:10] "[36mGET /vendor/bootstrap/css/bootstrap.css HTTP/1.1[0m" 304 -
+2023-01-28 19:55:10,542 : INFO : 127.0.0.1 - - [28/Jan/2023 19:55:10] "[36mGET /vendor/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+2023-01-28 19:55:10,543 : INFO : 127.0.0.1 - - [28/Jan/2023 19:55:10] "[36mGET /vendor/foundation-icons/foundation-icons.css HTTP/1.1[0m" 304 -
+2023-01-28 19:55:10,545 : INFO : 127.0.0.1 - - [28/Jan/2023 19:55:10] "[36mGET /resources/css/custom-style.css HTTP/1.1[0m" 304 -
+2023-01-28 19:55:10,546 : INFO : 127.0.0.1 - - [28/Jan/2023 19:55:10] "[36mGET /vendor/jquery/jquery-3.3.1.min.js HTTP/1.1[0m" 304 -
+2023-01-28 19:55:10,547 : INFO : 127.0.0.1 - - [28/Jan/2023 19:55:10] "[36mGET /resources/js/http_resonse.js HTTP/1.1[0m" 304 -
+2023-01-28 19:55:10,868 : INFO : 127.0.0.1 - - [28/Jan/2023 19:55:10] "[36mGET /vendor/foundation-icons/foundation-icons.woff HTTP/1.1[0m" 304 -
+2023-01-28 19:55:10,870 : INFO : 127.0.0.1 - - [28/Jan/2023 19:55:10] "[36mGET /resources/images/chat-bg.png HTTP/1.1[0m" 304 -
+2023-01-28 19:55:10,871 : INFO : 127.0.0.1 - - [28/Jan/2023 19:55:10] "[36mGET /resources/images/bg.png HTTP/1.1[0m" 304 -
+2023-01-28 19:55:15,977 : INFO : 127.0.0.1 - - [28/Jan/2023 19:55:15] "POST /batch HTTP/1.1" 200 -
+2023-01-28 19:55:47,881 : INFO : 127.0.0.1 - - [28/Jan/2023 19:55:47] "POST /stream HTTP/1.1" 200 -
+2023-01-28 19:59:31,514 : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2023-01-28 19:59:31,514 : INFO : [33mPress CTRL+C to quit[0m
+2023-01-28 19:59:33,590 : INFO : 127.0.0.1 - - [28/Jan/2023 19:59:33] "GET / HTTP/1.1" 200 -
+2023-01-28 19:59:33,852 : INFO : 127.0.0.1 - - [28/Jan/2023 19:59:33] "[36mGET /vendor/bootstrap/css/bootstrap.css HTTP/1.1[0m" 304 -
+2023-01-28 19:59:33,916 : INFO : 127.0.0.1 - - [28/Jan/2023 19:59:33] "[36mGET /vendor/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+2023-01-28 19:59:33,918 : INFO : 127.0.0.1 - - [28/Jan/2023 19:59:33] "[36mGET /vendor/foundation-icons/foundation-icons.css HTTP/1.1[0m" 304 -
+2023-01-28 19:59:33,920 : INFO : 127.0.0.1 - - [28/Jan/2023 19:59:33] "[36mGET /resources/css/custom-style.css HTTP/1.1[0m" 304 -
+2023-01-28 19:59:33,921 : INFO : 127.0.0.1 - - [28/Jan/2023 19:59:33] "[36mGET /vendor/jquery/jquery-3.3.1.min.js HTTP/1.1[0m" 304 -
+2023-01-28 19:59:33,922 : INFO : 127.0.0.1 - - [28/Jan/2023 19:59:33] "[36mGET /resources/js/http_resonse.js HTTP/1.1[0m" 304 -
+2023-01-28 19:59:34,257 : INFO : 127.0.0.1 - - [28/Jan/2023 19:59:34] "[36mGET /vendor/foundation-icons/foundation-icons.woff HTTP/1.1[0m" 304 -
+2023-01-28 19:59:34,260 : INFO : 127.0.0.1 - - [28/Jan/2023 19:59:34] "[36mGET /resources/images/bg.png HTTP/1.1[0m" 304 -
+2023-01-28 19:59:34,261 : INFO : 127.0.0.1 - - [28/Jan/2023 19:59:34] "[36mGET /resources/images/chat-bg.png HTTP/1.1[0m" 304 -
+2023-01-28 19:59:36,739 : INFO : 127.0.0.1 - - [28/Jan/2023 19:59:36] "POST /batch HTTP/1.1" 200 -
+2023-01-28 20:00:31,400 : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2023-01-28 20:00:31,401 : INFO : [33mPress CTRL+C to quit[0m
+2023-01-28 20:00:35,254 : INFO : 127.0.0.1 - - [28/Jan/2023 20:00:35] "GET / HTTP/1.1" 200 -
+2023-01-28 20:00:35,509 : INFO : 127.0.0.1 - - [28/Jan/2023 20:00:35] "[36mGET /vendor/bootstrap/css/bootstrap.css HTTP/1.1[0m" 304 -
+2023-01-28 20:00:35,585 : INFO : 127.0.0.1 - - [28/Jan/2023 20:00:35] "[36mGET /vendor/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+2023-01-28 20:00:35,595 : INFO : 127.0.0.1 - - [28/Jan/2023 20:00:35] "[36mGET /vendor/foundation-icons/foundation-icons.css HTTP/1.1[0m" 304 -
+2023-01-28 20:00:35,601 : INFO : 127.0.0.1 - - [28/Jan/2023 20:00:35] "[36mGET /resources/css/custom-style.css HTTP/1.1[0m" 304 -
+2023-01-28 20:00:35,638 : INFO : 127.0.0.1 - - [28/Jan/2023 20:00:35] "[36mGET /vendor/jquery/jquery-3.3.1.min.js HTTP/1.1[0m" 304 -
+2023-01-28 20:00:35,652 : INFO : 127.0.0.1 - - [28/Jan/2023 20:00:35] "[36mGET /resources/js/http_resonse.js HTTP/1.1[0m" 304 -
+2023-01-28 20:00:35,970 : INFO : 127.0.0.1 - - [28/Jan/2023 20:00:35] "[36mGET /vendor/foundation-icons/foundation-icons.woff HTTP/1.1[0m" 304 -
+2023-01-28 20:00:35,972 : INFO : 127.0.0.1 - - [28/Jan/2023 20:00:35] "[36mGET /resources/images/bg.png HTTP/1.1[0m" 304 -
+2023-01-28 20:00:35,973 : INFO : 127.0.0.1 - - [28/Jan/2023 20:00:35] "[36mGET /resources/images/chat-bg.png HTTP/1.1[0m" 304 -
+2023-01-28 20:00:37,263 : INFO : 127.0.0.1 - - [28/Jan/2023 20:00:37] "POST /batch HTTP/1.1" 200 -
+2023-01-28 20:01:03,520 : INFO : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2023-01-28 20:01:03,520 : INFO : [33mPress CTRL+C to quit[0m
+2023-01-28 20:01:04,873 : INFO : 127.0.0.1 - - [28/Jan/2023 20:01:04] "GET / HTTP/1.1" 200 -
+2023-01-28 20:01:05,120 : INFO : 127.0.0.1 - - [28/Jan/2023 20:01:05] "[36mGET /vendor/bootstrap/css/bootstrap.css HTTP/1.1[0m" 304 -
+2023-01-28 20:01:05,198 : INFO : 127.0.0.1 - - [28/Jan/2023 20:01:05] "[36mGET /vendor/fontawesome-free/css/all.min.css HTTP/1.1[0m" 304 -
+2023-01-28 20:01:05,200 : INFO : 127.0.0.1 - - [28/Jan/2023 20:01:05] "[36mGET /vendor/foundation-icons/foundation-icons.css HTTP/1.1[0m" 304 -
+2023-01-28 20:01:05,202 : INFO : 127.0.0.1 - - [28/Jan/2023 20:01:05] "[36mGET /resources/css/custom-style.css HTTP/1.1[0m" 304 -
+2023-01-28 20:01:05,203 : INFO : 127.0.0.1 - - [28/Jan/2023 20:01:05] "[36mGET /vendor/jquery/jquery-3.3.1.min.js HTTP/1.1[0m" 304 -
+2023-01-28 20:01:05,205 : INFO : 127.0.0.1 - - [28/Jan/2023 20:01:05] "[36mGET /resources/js/http_resonse.js HTTP/1.1[0m" 304 -
+2023-01-28 20:01:05,537 : INFO : 127.0.0.1 - - [28/Jan/2023 20:01:05] "[36mGET /resources/images/bg.png HTTP/1.1[0m" 304 -
+2023-01-28 20:01:05,539 : INFO : 127.0.0.1 - - [28/Jan/2023 20:01:05] "[36mGET /resources/images/chat-bg.png HTTP/1.1[0m" 304 -
+2023-01-28 20:01:06,915 : INFO : 127.0.0.1 - - [28/Jan/2023 20:01:06] "POST /batch HTTP/1.1" 200 -
