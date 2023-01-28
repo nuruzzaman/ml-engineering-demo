@@ -55,7 +55,6 @@ def evaluate(model, X, y, y_predicted, plot_filename=None):
     plt.xticks(())
     plt.yticks(())
 
-    plot_filename = 'test'
     if plot_filename:
         plt.savefig(plot_filename)
     plt.show()

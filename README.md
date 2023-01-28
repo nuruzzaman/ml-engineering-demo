@@ -134,5 +134,4 @@ The excerise provided is an implementation of linear regression using stochastic
 - Feature scaling: Scale the input features before training the model to ensure that all features are on the same scale. This will improve the performance of the model and make the optimization process faster.
 - Add validation set: Use a separate validation set to evaluate the model during training, to prevent overfitting and to select the best model.
 - Add more feature: you could add more feature to your data set, so that the model can learn more about the data.
-- Add cross validation: Use k-fold cross validation to evaluate the performance of the model on different subsets of the data, which will give a better estimate of the model's performance.
 - Implement other regression algorithms. 
