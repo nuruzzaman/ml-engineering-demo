@@ -5,36 +5,55 @@
 [![CodeQL](https://github.com/nuruzzaman/ml-engineering-demo/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/nuruzzaman/ml-engineering-demo/actions/workflows/github-code-scanning/codeql)
 
 
-#### Solution Includes 
-- The solution works end-to-end from loading diabetes dataset, train the model, predict, save the model, reload it for inference from web, build docker image, deploy it in production through CI/CD pipeline.   
+### Challenge Overview 
+The challenge is designed to test a large variety of skills that a machine learning engineer would use in their day to day work. There are no restrictions in terms of technology except Python 3. 
+
+(1) The diabetes dataset was given with 442 patients data and 10 features. However, only one feature was feed into the model and made inference. The task is to fill in the gaps in the `SimpleLinearRegression` class so that the code will run successfully. 
+
+(2) Then, create `app.py` to make it an API for inference. Make the API invokable from a http request. The API should have two endpoints:
+- `POST /stream` : which takes a payload of one record and return the prediction for that record.
+- `POST /batch` : which takes an array of multiple records and return an array of predictions
+
+(3) Package all codes into a python package and container. Create a simple CICD pipeline and code should be invokable from a public URL. 
+
+(4) Provide a solution document and hight-level architecture-diagram. 
+
+ 
+#### Solution Overview 
+
+The solution works end-to-end from loading diabetes dataset, train the model, predict, save the model, reload it for inference from web browser, build docker image, deploy it in Heroku through CI/CD pipeline. The test solution can be accessible at https://ml-engineering-demo.herokuapp.com/ 
+
+My solution also includes the following: 
+- Hyper-parameter optimization technique 
 - Unit tests 
-- CI/CD Pipeline for Heroku and Docker 
-- Capture application logs  
-- Store Model Artifacts 
-- Live Heroku App: https://ml-engineering-demo.herokuapp.com/ 
+- Capture application logs
+- Store model artifacts  
+- CI/CD Pipeline for Heroku and DockerHub 
+- Flexibile intregration with other systems or platforms
+
+Note: as there is only one feature, so data preparation, feature engineering was not implemented. 
 
 
-### Installation packages
-Install the required python library using pip and install dependency of your application. 
+### Installation python libraries
+First we need to create a virtual environment and install the required python libraries using pip and dependency of the application using following command. 
 ```
-pip install -r requirements
+pip install -r requirements -U
 ```
 
-### Packaging code for installable and testable ###
-You can find the existing installable file in `\dist` folder and install it using `pip`. 
 
-You can package your code using `wheel` to make it easily installable. 
+### Packaging code for installable and testable
+You can find the existing installable file in `\dist` folder. However, you can package your code and make another installable file using `pip` and `wheel`. 
 ```
 python setup.py sdist bdist_wheel
 ```
 
-Upgrade the wheel: 
+To upgrade the wheel (if require): 
 ```
 python -m pip install --user --upgrade setuptools wheel  
 ```
 
-### Packaging into a container and deploy it to a container registry
-You can fully dockerize the application and all the services that it depends on. I created `Dockerfile` can be found at root directory. This file will contain the instructions for building the Docker image. To achieve this, first build a docker image locally by running:
+### Packaging into a container and deploy it to a container registry (LOCALLY) 
+You can fully dockerize the application and all the services that it depends on. I created `Dockerfile` can be found at root directory. This file contains instructions for building the Docker image. To achieve this, first build a docker image locally:
 ```
 docker build -t ml-engineering-demo:latest .
 ```
@@ -44,7 +63,7 @@ Once the image is built, you can scan Snyk tests to find vulnerabilities using `
 Finally, run the following command to start your application locally.
 `docker run -d -p 5000:5000 ml-engineering-demo:latest`
 
-Then the application will be accessible on the host browser at http://localhost:5000 
+Then the application can be accessible on the host browser at http://localhost:5000 
 To stop the container use `docker container stop container_id`
 
 You also can use `docker-compose` for building and running the container, which is more efficient when you have multiple services. You `docker-compose` file at root directory. 
@@ -52,14 +71,14 @@ You also can use `docker-compose` for building and running the container, which 
 docker-compose up -d 
 ```
 
-#### CI/CD pipeline to deploy into production
-I created a workflow in github. when you commit your code it will be automatically test, build and deploy code in production environment. 
+
+#### CI/CD pipeline to deploy into Heroku (Prod environment)
+I created a workflow in github. when you commit your code it will be automatically tested the code, build and deploy in production environment. The test solution can be accessible at https://ml-engineering-demo.herokuapp.com/ 
+
+There is another automated pipeline for DockerHub as well. You can find docker image at: https://hub.docker.com/r/data2ml/ml-engineering
 
 
-
-## Q/A
-#### High-level overview of the system design and its key components. OR Architecture diagram of the implementation
-
+#### High-level architecture diagram of the implementation
 ![architecture-diagram.png](architecture-diagram.png) 
    
 
@@ -88,7 +107,6 @@ An enterprise machine learning (ML) system would have several features, such as:
 - Automation: possible to reduce manual intervention and improve efficiency.  
 
 
-
 #### What stages requires to implement full CI/CD pipeline? 
 Designing a CI/CD pipeline is depending on the organization and the application. A full CI/CD pipeline typically includes several stages, including: 
 - Source control management: managing and tracking code changes in a source control system, such as GitHub.
@@ -99,6 +117,7 @@ Designing a CI/CD pipeline is depending on the organization and the application.
 - Monitoring and logging: to ensure that it is running correctly and to collect data on its performance. This may include monitoring the application's logs, performance metrics, and error rates.
 - Release: involves releasing the code to end-users, which can be achieved through different ways such as blue-green deployment. 
 
+
 #### Time and memory complexity of the code
 Time and memory complexity analysis is the process of determining how the running time or memory usage of a program increases as the input size grows. It involves examining the algorithms and data structures used in the code, and determining how they affect the overall performance of the program.
 
@@ -107,6 +126,4 @@ The excerise provided is an implementation of linear regression using stochastic
 - fit: The complexity of the fit function depends on the number of samples and the number of features. 
 - predict: 
 - params_optimization: depends on the complexity of the estimator used, in this case GradientBoostingRegressor and number of parameters, samples & features and the number of boosting stages. 
-
-
 
