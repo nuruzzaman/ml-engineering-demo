@@ -1,10 +1,11 @@
 import numpy as np
 import pickle
+import time
+import sys
 from numpy import ravel
 from sklearn.ensemble import GradientBoostingRegressor
 from sklearn.model_selection import GridSearchCV, KFold
 from sklearn.metrics import mean_squared_error, r2_score
-from sklearn.preprocessing import StandardScaler
 
 from simple_linear_regr_utils import generate_data, evaluate, feature_scaling
 
@@ -15,14 +16,14 @@ class SimpleLinearRegression:
     using stochastic gradient descent (SGD) to fit the model.
     """
 
-    def __init__(self, iterations=15000, lr=0.1, l2=0.1, reg_coef=0.01):
+    def __init__(self, iterations=15000, lr=0.1, l2=0.01):
         self.iterations = iterations # number of iterations the fit method will be called
         self.lr = lr # The learning rate
         self.losses = [] # A list to hold the history of the calculated losses
         self.W, self.b = None, None # the slope and the intercept of the model
-        self.reg_coef = reg_coef
-        self.coef_ = None
-        self.l2 = l2
+        self.coef_ = None   # coefficients, the relationship between the features and the target variable.
+        self.l2 = l2    # prevent overfitting by adding a penalty term to the loss function
+        self.time_complexity = None
 
     def _loss(self, y, y_hat):
         """
@@ -34,9 +35,13 @@ class SimpleLinearRegression:
         # Calculate the sum of squared errors (L2 loss) between the actual
         # and predicted outputs on the training set.
         loss = (1 / y.shape[0]) * np.sum((y - y_hat) ** 2)
-        reg_loss = self.reg_coef * (self.coef_ ** 2).sum()
+
+        # Add the L2 regularization term to the loss
+        # np.sum(self.W ** 2) is the L2 regularization term
+        loss += (self.l2 / (2 * y.shape[0])) * np.sum(self.W ** 2)
+
         self.losses.append(loss)
-        return loss + reg_loss
+        return loss
 
     def _init_weights(self, X):
         """
@@ -70,7 +75,8 @@ class SimpleLinearRegression:
         :param y: The true output of the training set
         :return:
         """
-        self.input_validation(X)
+        start_time = time.time()
+        self.data_validation(X)
         self._init_weights(X)
 
         # Initialize the parameters
@@ -91,7 +97,11 @@ class SimpleLinearRegression:
 
             if i % 100 == 0:
                 print(f"Iteration {i}, Loss: {loss}")
-        print(f"Initial Loss: {self.losses[0]}, Final Loss: {self.losses[-1]}")
+
+        end_time = time.time()
+        self.time_complexity = end_time - start_time
+
+        print(f"\nInitial Loss: {self.losses[0]}, Final Loss: {self.losses[-1]}")
         return self
 
     def predict(self, X):
@@ -100,21 +110,34 @@ class SimpleLinearRegression:
         :return:
             y_hat: the predicted output
         """
-        self.input_validation(X)
+        self.data_validation(X)
 
         # Calculate the predicted output y_hat.
         # remember the function of a line is defined as y = WX + b
         y_hat = np.dot(X, self.W.T) + self.b
         return y_hat
 
-    def input_validation(self, X):
+    def data_validation(self, X):
         """
-        Validate the input data before training or predicting with the model.
+        Data validation to check the input data is in correct format before fitting the model.
         """
         if not isinstance(X, np.ndarray):
             raise ValueError("X and y must be of type numpy.ndarray")
         if X.shape[1] <= 0:
             raise ValueError("X must have at least one feature")
+        if X.ndim != 2:
+            raise ValueError("X must be a 2D array.")
+
+    def memory_complexity(self):
+        """  memory complexity of the model's parameters.
+            calculates the amount of memory used by an algorithm during its execution
+        params:
+            coef_: holds the values of the coefficients
+            W.T : the transpose weight matrix
+        :return:
+            bytes
+        """
+        return sys.getsizeof(self.coef_) + sys.getsizeof(self.W.T)
 
     def params_optimization(self, X_train, y_train, X_test, y_test):
         # Define the parameter grid
@@ -162,11 +185,16 @@ if __name__ == "__main__":
         # Save model if r2_score>0.4
         with open("Diabetes.pkl", "wb") as file:
             pickle.dump(model, file)
+        print('\nModel saved!')
 
         # Load existing model
         loaded_model = pickle.load(open("Diabetes.pkl", "rb"))
+        print('Model loaded for inference!')
 
         # Make prediction on unseen data
         X = np.array([[1], [2], [3]])
         y = loaded_model.predict(X)
-        print(f'Predicted values: {y}')
+        print(f'Predicted values from new data:\n {y}')
+
+    print(f'Memory complexity: {model.memory_complexity()} bytes')
+    print(f"Total time taken: {model.time_complexity:.2f} second\n")
