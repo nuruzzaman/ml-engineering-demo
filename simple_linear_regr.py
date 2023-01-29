@@ -6,6 +6,7 @@ from numpy import ravel
 from sklearn.ensemble import GradientBoostingRegressor
 from sklearn.model_selection import GridSearchCV, KFold
 from sklearn.metrics import mean_squared_error, r2_score
+from sklearn.preprocessing import StandardScaler
 
 from simple_linear_regr_utils import generate_data, evaluate, feature_scaling
 
@@ -159,17 +160,20 @@ class SimpleLinearRegression:
         print(f"The best estimator across ALL searched params: {grid_search.best_estimator_}")
         print(f"Best parameters: {grid_search.best_params_}")
 
+        feature_importance = grid_search.best_estimator_.feature_importances_
+        print(f'feature importance: {feature_importance}')
+
         # Make predictions on the test set
-        y_pred = grid_search.predict(X_test)
+        y_pred = grid_search.best_estimator_.predict(X_test)
         print(f"Mean squared error: {mean_squared_error(y_test, y_pred)}")
-        print(f"R^2 score: {r2_score(y_test, y_pred)}")
-        return grid_search.best_params_
+        print(f"Coefficient of determination: {r2_score(y_test, y_pred)}")
+        return grid_search
 
 
 if __name__ == "__main__":
-    model = SimpleLinearRegression()
     X_train, y_train, X_test, y_test = generate_data()
 
+    model = SimpleLinearRegression()
     # Hyperparam optimization
     # model.params_optimization(X_train, y_train, X_test, y_test)
 
@@ -189,10 +193,14 @@ if __name__ == "__main__":
 
         # Load existing model
         loaded_model = pickle.load(open("Diabetes.pkl", "rb"))
-        print('Model loaded for inference!')
+        print('Model reloaded for inference!')
 
         # Make prediction on unseen data
-        X = np.array([[1], [2], [3]])
+        ##################################
+        new_data = np.array([[1], [2], [3]])
+
+        scaler = StandardScaler()
+        X = scaler.fit_transform(new_data)
         y = loaded_model.predict(X)
         print(f'Predicted values from new data:\n {y}')
 

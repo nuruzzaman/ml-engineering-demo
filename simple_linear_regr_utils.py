@@ -1,8 +1,10 @@
 import numpy as np
 from sklearn.datasets import load_diabetes
+from sklearn.impute import SimpleImputer
 from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
 import matplotlib.pyplot as plt
 from sklearn.preprocessing import StandardScaler
+from sklearn.pipeline import Pipeline
 
 
 def generate_data():
@@ -34,10 +36,15 @@ def generate_data():
 
 
 def feature_scaling(X_train, X_test):
-    """ Features Scaling using StandardScaler """
-    scaler = StandardScaler()
-    X_train_scaled = scaler.fit_transform(X_train)
-    X_test_scaled = scaler.transform(X_test)
+    """ Features Scaling using StandardScaler and Imputation
+    Only one feature is give which is numeric. so we dont need `OneHotEncoder`
+    """
+    num_pipeline = Pipeline([
+        ('imputer', SimpleImputer(strategy="median")),
+        ('std_scaler', StandardScaler()),
+    ])
+    X_train_scaled = num_pipeline.fit_transform(X_train)
+    X_test_scaled = num_pipeline.transform(X_test)
     return X_train_scaled, X_test_scaled
 
 
