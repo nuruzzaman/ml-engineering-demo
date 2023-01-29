@@ -4,7 +4,9 @@ from numpy import ravel
 from sklearn.ensemble import GradientBoostingRegressor
 from sklearn.model_selection import GridSearchCV, KFold
 from sklearn.metrics import mean_squared_error, r2_score
-from simple_linear_regr_utils import generate_data, evaluate
+from sklearn.preprocessing import StandardScaler
+
+from simple_linear_regr_utils import generate_data, evaluate, feature_scaling
 
 
 class SimpleLinearRegression:
@@ -27,7 +29,7 @@ class SimpleLinearRegression:
         :param y: the actual output on the training set
         :param y_hat: the predicted output on the training set
         :return:
-            loss: the sum of squared error
+            loss: the sum of squared error (MSE)
         """
         # Calculate the sum of squared errors (L2 loss) between the actual
         # and predicted outputs on the training set.
@@ -148,6 +150,9 @@ if __name__ == "__main__":
     # Hyperparam optimization
     # model.params_optimization(X_train, y_train, X_test, y_test)
 
+    # Features Scaling
+    X_train_scaled, X_test_scaled = feature_scaling(X_train, X_test)
+
     # Training
     model.fit(X_train, y_train)
     predicted = model.predict(X_test)
@@ -164,4 +169,4 @@ if __name__ == "__main__":
         # Make prediction on unseen data
         X = np.array([[1], [2], [3]])
         y = loaded_model.predict(X)
-        print('Predicted value: ', y)
+        print(f'Predicted values: {y}')

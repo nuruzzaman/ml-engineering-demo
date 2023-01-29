@@ -4,7 +4,7 @@ from numpy import ravel
 from sklearn.ensemble import GradientBoostingRegressor
 from sklearn.model_selection import GridSearchCV, KFold
 from sklearn.metrics import mean_squared_error, r2_score
-from simple_linear_regr_utils import generate_data, evaluate
+from simple_linear_regr_utils import generate_data, evaluate, feature_scaling
 from sklearn.preprocessing import StandardScaler
 
 
@@ -14,7 +14,7 @@ class Test1:
     using stochastic gradient descent (SGD) to fit the model.
     """
 
-    def __init__(self, iterations=15000, lr=0.1, l2=0, reg_coef=0.01):
+    def __init__(self, iterations=10000, lr=0.1, l2=0, reg_coef=0.01):
         self.iterations = iterations # number of iterations the fit method will be called
         self.lr = lr # The learning rate
         self.losses = [] # A list to hold the history of the calculated losses
@@ -39,14 +39,13 @@ class Test1:
         :param y: the actual output on the training set
         :param y_hat: the predicted output on the training set
         :return:
-            loss: the sum of squared error
+            loss: the sum of squared error (MSE)
         """
         # Calculate the sum of squared errors (L2 loss) between the actual
         # and predicted outputs on the training set.
         loss = (1 / y.shape[0]) * np.sum((y - y_hat) ** 2)
-        reg_loss = self.reg_coef * (self.coef_ ** 2).sum()
         self.losses.append(loss)
-        return loss + reg_loss
+        return loss
 
     def _sgd(self, X, y, y_hat):
         """
@@ -152,10 +151,8 @@ if __name__ == "__main__":
     # Hyperparam optimization
     # model.params_optimization(X_train, y_train, X_test, y_test)
 
-    # StandardScaler to normalize the data
-    scaler = StandardScaler()
-    X_train_scaled = scaler.fit_transform(X_train)
-    X_test_scaled = scaler.transform(X_test)
+    # Features Scaling
+    X_train_scaled, X_test_scaled = feature_scaling(X_train, X_test)
 
     # Training
     model = Test1()

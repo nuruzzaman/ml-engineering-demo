@@ -2,6 +2,7 @@ import numpy as np
 from sklearn.datasets import load_diabetes
 from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
 import matplotlib.pyplot as plt
+from sklearn.preprocessing import StandardScaler
 
 
 def generate_data():
@@ -30,6 +31,14 @@ def generate_data():
 
     print(f"# Training Samples: {len(diabetes_X_train)}; # Test samples: {len(diabetes_X_test)};")
     return diabetes_X_train, diabetes_y_train, diabetes_X_test, diabetes_y_test
+
+
+def feature_scaling(X_train, X_test):
+    """ Features Scaling using StandardScaler """
+    scaler = StandardScaler()
+    X_train_scaled = scaler.fit_transform(X_train)
+    X_test_scaled = scaler.transform(X_test)
+    return X_train_scaled, X_test_scaled
 
 
 def evaluate(model, X, y, y_predicted, plot_filename=None):
