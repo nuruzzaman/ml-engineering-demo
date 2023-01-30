@@ -2,7 +2,6 @@ import numpy as np
 import pickle
 import time
 import sys
-from numpy import ravel
 from sklearn.ensemble import GradientBoostingRegressor
 from sklearn.model_selection import GridSearchCV, KFold
 from sklearn.metrics import mean_squared_error, r2_score
