@@ -1,10 +1,8 @@
 ## ML Engineering Challenge: Achieved Coefficient of determination: 0.51
-![Coefficient.png](Coefficient.png) 
-
 [![heroku](https://github.com/nuruzzaman/ml-engineering-demo/actions/workflows/heroku.yml/badge.svg)](https://github.com/nuruzzaman/ml-engineering-demo/actions/workflows/heroku.yml)
 [![Docker](https://github.com/nuruzzaman/ml-engineering-demo/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/nuruzzaman/ml-engineering-demo/actions/workflows/docker-publish.yml)
 [![CodeQL](https://github.com/nuruzzaman/ml-engineering-demo/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/nuruzzaman/ml-engineering-demo/actions/workflows/github-code-scanning/codeql)
-
+![Coefficient..png](Coefficient..png) 
 
 ### Challenge Overview 
 The challenge is designed to test a large variety of skills that a machine learning engineer would use in their day to day work. There are no restrictions in terms of technology except Python 3. 
