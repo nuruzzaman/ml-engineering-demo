@@ -50,9 +50,6 @@ def feature_scaling(X_train, X_test):
 
 def evaluate(model, X, y, y_predicted, plot_filename=None):
     """ Calculates and prints evaluation metrics. """
-    # The coefficients
-    print(f"Slope: {model.W}; Intercept: {model.b}")
-
     # The mean squared error
     mse = mean_squared_error(y, y_predicted)
     print(f"Mean squared error: {mse:.2f}")
