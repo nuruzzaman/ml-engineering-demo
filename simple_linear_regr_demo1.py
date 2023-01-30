@@ -154,7 +154,7 @@ def main():
 
         # Make prediction on unseen data
         ##################################
-        new_data = np.array([[1], [2], [3]])
+        new_data = np.array([[1]])
         y_new = loaded_model.predict(new_data)
         print(f'Predicted values from new data:\n {y_new}')
 
