@@ -1,7 +1,7 @@
 import unittest
 import numpy as np
 from simple_linear_regr_utils import generate_data, evaluate
-from simple_linear_regr import SimpleLinearRegression
+from simple_linear_regr_demo1 import SimpleLinearRegression
 
 
 class TestSimpleLinearRegression(unittest.TestCase):
@@ -24,7 +24,7 @@ class TestSimpleLinearRegression(unittest.TestCase):
     def test_init(self):
         self.assertIsInstance(self.model, SimpleLinearRegression)
         self.assertEqual(self.model.iterations, 15000)
-        self.assertEqual(self.model.lr, 0.1)
+        self.assertEqual(self.model.learning_rate, 0.1)
 
     def test_loss(self):
         # y = np.array([1, 2, 3])
