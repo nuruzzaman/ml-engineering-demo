@@ -1,4 +1,5 @@
-## ML Engineering Challenge
+## ML Engineering Challenge: Achieved Coefficient of determination: 0.51
+![Coefficient.png](Coefficient.png) 
 
 [![heroku](https://github.com/nuruzzaman/ml-engineering-demo/actions/workflows/heroku.yml/badge.svg)](https://github.com/nuruzzaman/ml-engineering-demo/actions/workflows/heroku.yml)
 [![Docker](https://github.com/nuruzzaman/ml-engineering-demo/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/nuruzzaman/ml-engineering-demo/actions/workflows/docker-publish.yml)
