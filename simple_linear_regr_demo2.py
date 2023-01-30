@@ -14,7 +14,7 @@ from simple_linear_regr_utils import generate_data, evaluate, feature_scaling
 
 class SimpleLinearRegression2:
     """
-    This is a simple implementation of linear regression
+    This is a Advanced implementation of linear regression
     using stochastic gradient descent (SGD) to fit the model.
     """
 
@@ -82,7 +82,14 @@ class SimpleLinearRegression2:
 
     def _sgd(self, X_train, y_train, learn_rate=0.1, decay_rate=0.0, batch_size=1, n_iter=50,
              tolerance=1e-06, random_state=1234):
-
+        """
+        :param X_train: The training set
+        :param y_train: The actual output on the training set
+        :param y_hat: The predicted output on the training set
+        :diff: momentum and the impact of the current gradient
+        :return:
+            sets vector
+        """
         # [1.1] Setting up the data type for NumPy arrays
         dtype_ = np.dtype("float64")
 
@@ -130,6 +137,11 @@ class SimpleLinearRegression2:
         return self.vector if self.vector.shape else self.vector.item()
 
     def fit(self, X_train, y_train):
+        """
+        :param X: The training set
+        :param y: The true output of the training set
+        :return:
+        """
         start_time = time.time()
 
         self.data_validation(X_train)
